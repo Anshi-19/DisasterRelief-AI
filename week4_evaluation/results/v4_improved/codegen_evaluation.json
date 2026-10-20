@@ -1,0 +1,221 @@
+[
+  {
+    "question_id": "CG01",
+    "extracted_code": "import unittest\nfrom backend.services.orchestration_service import detect_disaster\n\nclass TestDetectDisaster(unittest.TestCase):\n    def test_flood(self):\n        query = \"The city is flooded due to heavy rainfall.\"\n        self.assertEqual(detect_disaster(query), \"flood\")\n\nif __name__ == \"__main__\":\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "import",
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpm4d1xrdv/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'detect_disaster' from 'backend.services.orchestration_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/orchestration_service.py)\n",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpm4d1xrdv/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'detect_disaster' from 'backend.services.orchestration_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/orchestration_service.py)\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=False",
+      "calls_detect_disaster=True",
+      "flood_query=True",
+      "expects_flood=True"
+    ],
+    "model": "codellama:latest"
+  },
+  {
+    "question_id": "CG01",
+    "extracted_code": "import unittest\nfrom your_module import detect_disaster\n\nclass TestDetectDisaster(unittest.TestCase):\n    def test_flood_detection(self):\n        query = \"My house was damaged by a flood. What assistance may be relevant?\"\n        result = detect_disaster(query)\n        self.assertEqual(result, \"flood\")\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "import",
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpgo_f2lg4/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nModuleNotFoundError: No module named 'your_module'\n",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpgo_f2lg4/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nModuleNotFoundError: No module named 'your_module'\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=False",
+      "calls_detect_disaster=True",
+      "flood_query=True",
+      "expects_flood=True"
+    ],
+    "model": "qwen2.5-coder:7b"
+  },
+  {
+    "question_id": "CG01",
+    "extracted_code": "import unittest\nfrom backend.services.orchestration_service import detect_disaster\n\nclass TestDetectDisaster(unittest.TestCase):\n\n    def test_flood_detection(self):\n        query = \"I'm worried about a flood in my area.\"\n        self.assertEqual(detect_disaster(query), \"flood\")\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "import",
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp480x47g9/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'detect_disaster' from 'backend.services.orchestration_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/orchestration_service.py)\n",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp480x47g9/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'detect_disaster' from 'backend.services.orchestration_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/orchestration_service.py)\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=False",
+      "calls_detect_disaster=True",
+      "flood_query=True",
+      "expects_flood=True"
+    ],
+    "model": "deepseek-coder:6.7b"
+  },
+  {
+    "question_id": "CG02",
+    "extracted_code": "import unittest\n\nclass TestDetectDisaster(unittest.TestCase):\n    def test_no_disaster(self):\n        query = \"What is the capital of France?\"\n        self.assertIsNone(detect_disaster(query))\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "runtime",
+    "error": "test_no_disaster (generated_submission.TestDetectDisaster.test_no_disaster) ... ERROR\n\n======================================================================\nERROR: test_no_disaster (generated_submission.TestDetectDisaster.test_no_disaster)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<generated>\", line 6, in test_no_disaster\nNameError: name 'detect_disaster' is not defined. Did you mean: 'TestDetectDisaster'?\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+    "stdout": "",
+    "stderr": "test_no_disaster (generated_submission.TestDetectDisaster.test_no_disaster) ... ERROR\n\n======================================================================\nERROR: test_no_disaster (generated_submission.TestDetectDisaster.test_no_disaster)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<generated>\", line 6, in test_no_disaster\nNameError: name 'detect_disaster' is not defined. Did you mean: 'TestDetectDisaster'?\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=False",
+      "calls_detect_disaster=True",
+      "has_query_call=True",
+      "expects_none=True"
+    ],
+    "model": "codellama:latest"
+  },
+  {
+    "question_id": "CG02",
+    "extracted_code": "from backend.services.retrieval_service import detect_disaster\n\ndef test_detect_disaster_no_keywords():\n    query = \"What is the weather like today?\"\n    result = detect_disaster(query)\n    assert result is None",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": true,
+    "error_type": null,
+    "error": null,
+    "stdout": "TEST_PASS\n",
+    "stderr": "",
+    "task_logic_correctness": 1.0,
+    "logic_notes": [
+      "imports_detect_disaster=True",
+      "calls_detect_disaster=True",
+      "has_query_call=True",
+      "expects_none=True"
+    ],
+    "model": "qwen2.5-coder:7b"
+  },
+  {
+    "question_id": "CG02",
+    "extracted_code": "import unittest\nfrom your_module import detect_disaster  # replace 'your_module' with the name of the module where detect_disaster is defined\n\nclass TestDetectDisaster(unittest.TestCase):\n    def test_no_disaster(self):\n        query = \"This query does not contain flood, earthquake, or cyclone\"\n        self.assertIsNone(detect_disaster(query))\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "import",
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpw787xdvl/CG02.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nModuleNotFoundError: No module named 'your_module'\n",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpw787xdvl/CG02.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nModuleNotFoundError: No module named 'your_module'\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=False",
+      "calls_detect_disaster=True",
+      "has_query_call=True",
+      "expects_none=True"
+    ],
+    "model": "deepseek-coder:6.7b"
+  },
+  {
+    "question_id": "CG03",
+    "extracted_code": "query = \"   \"\nprint(is_empty_query(query))  # Output: True\n\nquery = \"Hello, world!\"\nprint(is_empty_query(query))  # Output: False",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "runtime",
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpte1__g5g/CG03.py\", line 7, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nNameError: name 'is_empty_query' is not defined\n",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpte1__g5g/CG03.py\", line 7, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nNameError: name 'is_empty_query' is not defined\n",
+    "task_logic_correctness": 0.0,
+    "logic_notes": [
+      "defines_function=False",
+      "uses_strip=False"
+    ],
+    "model": "codellama:latest"
+  },
+  {
+    "question_id": "CG03",
+    "extracted_code": "def is_query_empty_or_whitespace(query: str) -> bool:\n    \"\"\"\n    Validates whether the provided query is empty or contains only whitespace.\n\n    Args:\n        query (str): The user query to validate.\n\n    Returns:\n        bool: True if the query is empty or contains only whitespace, False otherwise.\n    \"\"\"\n    return not (query or \"\").strip()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": true,
+    "error_type": null,
+    "error": null,
+    "stdout": "TEST_PASS\n",
+    "stderr": "",
+    "task_logic_correctness": 1.0,
+    "logic_notes": [
+      "defines_function=True",
+      "uses_strip=True"
+    ],
+    "model": "qwen2.5-coder:7b"
+  },
+  {
+    "question_id": "CG03",
+    "extracted_code": "def is_query_empty(query):\n    if query.strip() == \"\":\n        return True\n    else:\n        return False",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": true,
+    "error_type": null,
+    "error": null,
+    "stdout": "TEST_PASS\n",
+    "stderr": "",
+    "task_logic_correctness": 1.0,
+    "logic_notes": [
+      "defines_function=True",
+      "uses_strip=True"
+    ],
+    "model": "deepseek-coder:6.7b"
+  },
+  {
+    "question_id": "CG04",
+    "extracted_code": "def test_build_context(self):\n    question = \"What is the capital of France?\"\n    context = \"The capital of France is Paris. It is located in the Île-de-France region.\"\n    generated_context = build_context(question, context)\n    self.assertIn(\"Paris\", generated_context)\n    self.assertIn(\"France\", generated_context)\n    self.assertIn(\"Île-de-France\", generated_context)\n    self.assertIn(\"region\", generated_context)\n    self.assertIn(\"content\", generated_context)",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "runtime",
+    "error": "NO_EXECUTABLE_TEST\n",
+    "stdout": "",
+    "stderr": "NO_EXECUTABLE_TEST\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_build_context=False",
+      "calls_build_context=True",
+      "metadata_fields=1/5"
+    ],
+    "model": "codellama:latest"
+  },
+  {
+    "question_id": "CG04",
+    "extracted_code": "from backend.services.orchestration_service import build_context\n\ndef test_build_context():\n    results = [\n        {\n            \"metadata\": {\n                \"document\": \"Document1\",\n                \"authority\": \"Authority1\",\n                \"disaster\": \"earthquake\",\n                \"pages\": [1, 2]\n            },\n            \"text\": \"Content of Document1\"\n        },\n        {\n            \"metadata\": {\n                \"document\": \"Document2\",\n                \"authority\": \"Authority2\",\n                \"disaster\": \"flood\",\n                \"pages\": [3, 4]\n            },\n            \"text\": \"Content of Document2\"\n        }\n    ]\n    context = build_context(results)\n    assert \"Document1\" in context\n    assert \"Authority1\" in context\n    assert \"earthquake\" in context\n    assert \"Document2\" in context\n    assert \"Authority2\" in context\n    assert \"flood\" in context\n    assert \"Page(s): [1, 2]\" in context\n    assert \"Page(s): [3, 4]\" in context\n    assert \"Content of Document1\" in context\n    assert \"Content of Document2\" in context",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": true,
+    "error_type": null,
+    "error": null,
+    "stdout": "TEST_PASS\n",
+    "stderr": "",
+    "task_logic_correctness": 1.0,
+    "logic_notes": [
+      "imports_build_context=True",
+      "calls_build_context=True",
+      "metadata_fields=4/5"
+    ],
+    "model": "qwen2.5-coder:7b"
+  },
+  {
+    "question_id": "CG04",
+    "extracted_code": "import unittest\nfrom backend.services.llm_service import build_context\n\nclass TestBuildContext(unittest.TestCase):\n    def test_build_context(self):\n        # Assuming a document object with the following structure\n        document = {\n            'name': 'Test Document',\n            'authority': 'Test Authority',\n            'disaster_type': 'Test Disaster',\n            'page_info': 'Test Page Info',\n            'content': 'Test Content'\n        }\n\n        # Call the function with the document object\n        context = build_context(document)\n\n        # Check if the context contains the document name, authority, disaster type, page information, and content\n        self.assertIn(document['name'], context)\n        self.assertIn(document['authority'], context)\n        self.assertIn(document['disaster_type'], context)\n        self.assertIn(document['page_info'], context)\n        self.assertIn(document['content'], context)\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "import",
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpb_eyqs7c/CG04.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'build_context' from 'backend.services.llm_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/llm_service.py)\n",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpb_eyqs7c/CG04.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'build_context' from 'backend.services.llm_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/llm_service.py)\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_build_context=False",
+      "calls_build_context=True",
+      "metadata_fields=4/5"
+    ],
+    "model": "deepseek-coder:6.7b"
+  }
+]

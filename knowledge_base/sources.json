@@ -1,0 +1,72 @@
+{
+  "project": "DisasterRelief AI",
+  "scope": {
+    "country": "India",
+    "disasters": [
+      "flood",
+      "cyclone",
+      "earthquake"
+    ]
+  },
+  "sources": [
+    {
+      "id": "mha-response-fund",
+      "name": "MHA Disaster Response Fund Information",
+      "authority": "Ministry of Home Affairs",
+      "category": "relief",
+      "disasters": [
+        "flood",
+        "cyclone",
+        "earthquake"
+      ],
+      "jurisdiction": "India",
+      "description": "Information about SDRF and NDRF and their role in disaster response and immediate relief."
+    },
+    {
+      "id": "national-disaster-management-plan",
+      "name": "National Disaster Management Plan",
+      "authority": "Government of India",
+      "category": "disaster-management",
+      "disasters": [
+        "flood",
+        "cyclone",
+        "earthquake"
+      ],
+      "jurisdiction": "India",
+      "description": "National framework for disaster preparedness, response, recovery and coordination."
+    },
+    {
+      "id": "ndma-flood-guidance",
+      "name": "NDMA Flood Guidance",
+      "authority": "National Disaster Management Authority",
+      "category": "safety",
+      "disasters": [
+        "flood"
+      ],
+      "jurisdiction": "India",
+      "description": "Flood preparedness, safety measures and recommended actions."
+    },
+    {
+      "id": "ndma-cyclone-guidance",
+      "name": "NDMA Cyclone Guidance",
+      "authority": "National Disaster Management Authority",
+      "category": "safety",
+      "disasters": [
+        "cyclone"
+      ],
+      "jurisdiction": "India",
+      "description": "Cyclone preparedness, safety measures and recommended actions."
+    },
+    {
+      "id": "ndma-earthquake-guidance",
+      "name": "NDMA Earthquake Guidance",
+      "authority": "National Disaster Management Authority",
+      "category": "safety",
+      "disasters": [
+        "earthquake"
+      ],
+      "jurisdiction": "India",
+      "description": "Earthquake preparedness, safety measures and recommended actions."
+    }
+  ]
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DisasterRelief-AI • Week 4 Multi-Model RAG Evaluation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="./benchmark_data.js"></script>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-elev: #121a2b;
+      --bg-card: #162033;
+      --border: #24324a;
+      --text: #e8eef9;
+      --muted: #93a1b8;
+      --faint: #6d7c94;
+      --accent: #3dd6c6;
+      --accent-2: #7aa2ff;
+      --warn: #f0b429;
+      --danger: #f07178;
+      --ok: #5eeaad;
+      --shadow: 0 18px 40px rgba(0,0,0,.28);
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+      --sans: "IBM Plex Sans", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2b4d 0%, transparent 50%),
+                  radial-gradient(900px 500px at 100% 0%, #12362f 0%, transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .nav {
+      position: sticky; top: 0; z-index: 40;
+      backdrop-filter: blur(16px);
+      background: rgba(11,18,32,.86);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1240px; margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: linear-gradient(135deg, #3dd6c6, #7aa2ff);
+      display: grid; place-items: center; font-weight: 700; color: #071018;
+    }
+    .brand h1 { font-size: 16px; font-weight: 700; }
+    .brand p { font-size: 12px; color: var(--muted); }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .nav-links a {
+      color: var(--muted); font-size: 12px; font-weight: 600;
+      padding: 6px 10px; border-radius: 999px; border: 1px solid transparent;
+    }
+    .nav-links a:hover { color: var(--text); border-color: var(--border); text-decoration: none; background: var(--bg-card); }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 32px 24px 80px; }
+    .hero { margin-bottom: 28px; }
+    .eyebrow { color: var(--accent); font-size: 12px; letter-spacing: .14em; font-weight: 700; text-transform: uppercase; }
+    .hero h2 { font-size: 34px; line-height: 1.15; margin: 8px 0 10px; letter-spacing: -.02em; }
+    .hero .lede { color: var(--muted); max-width: 760px; }
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 22px 0 28px; }
+    .kpi, .card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+    .kpi { padding: 16px 18px; }
+    .kpi .label { font-size: 11px; color: var(--faint); text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
+    .kpi .value { font-family: var(--mono); font-size: 26px; margin-top: 6px; }
+    .kpi .sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    section { margin: 36px 0; }
+    h3 { font-size: 22px; margin-bottom: 8px; }
+    .section-lead { color: var(--muted); margin-bottom: 16px; max-width: 820px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+    .model-card { padding: 18px; }
+    .model-card h4 { font-size: 18px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+    .badge {
+      font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 999px;
+      background: rgba(61,214,198,.12); color: var(--accent); border: 1px solid rgba(61,214,198,.25);
+    }
+    .badge.neutral { background: rgba(122,162,255,.12); color: var(--accent-2); border-color: rgba(122,162,255,.25); }
+    dl { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; font-size: 13px; }
+    dt { color: var(--muted); } dd { font-family: var(--mono); text-align: right; }
+    .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+    .chart-card { padding: 16px; }
+    .chart-card h4 { font-size: 14px; margin-bottom: 10px; color: var(--muted); font-weight: 600; }
+    .chart-box { position: relative; height: 260px; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { text-align: left; padding: 10px 12px; background: #0f1a2e; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+    td { padding: 10px 12px; border-top: 1px solid var(--border); vertical-align: top; }
+    tbody tr:hover { background: rgba(255,255,255,.02); }
+    .interp { margin-top: 12px; color: var(--muted); font-size: 13px; }
+    .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 16px 0; }
+    .flow span {
+      background: #0f1a2e; border: 1px solid var(--border); padding: 8px 10px; border-radius: 10px;
+      font-family: var(--mono); font-size: 12px;
+    }
+    .flow .arrow { color: var(--accent); border: 0; background: transparent; padding: 0; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .tab {
+      background: #0f1a2e; color: var(--muted); border: 1px solid var(--border);
+      padding: 8px 10px; border-radius: 10px; cursor: pointer; font-size: 12px; font-weight: 600;
+    }
+    .tab.active { color: #071018; background: var(--accent); border-color: var(--accent); }
+    .case { padding: 18px; }
+    .case h4 { margin-bottom: 6px; }
+    .meta { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
+    details { background: #0f1a2e; border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin: 8px 0; }
+    summary { cursor: pointer; font-weight: 600; font-size: 13px; }
+    pre, .mono-block {
+      white-space: pre-wrap; font-family: var(--mono); font-size: 12px; color: #d5deee;
+      margin-top: 8px; max-height: 280px; overflow: auto;
+    }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 800px) { .pair { grid-template-columns: 1fr; } .hero h2 { font-size: 26px; } }
+    .downloads { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border);
+      background: var(--bg-elev); color: var(--text); font-weight: 600; font-size: 13px;
+    }
+    .btn:hover { border-color: var(--accent); text-decoration: none; }
+    .note { font-size: 12px; color: var(--faint); margin-top: 10px; }
+    footer { color: var(--faint); font-size: 12px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">DR</div>
+        <div>
+          <h1>DisasterRelief-AI</h1>
+          <p>Week 4 Multi-Model RAG Evaluation</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#models">Model Comparison</a>
+        <a href="#categories">Category Analysis</a>
+        <a href="#rag">RAG Analysis</a>
+        <a href="#repo">Repository Analysis</a>
+        <a href="#performance">Performance</a>
+        <a href="#method">Methodology</a>
+        <a href="#downloads">Downloads</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="overview">
+      <div class="eyebrow">Empirical local-LLM benchmark</div>
+      <h2>Week 4 Multi-Model RAG Evaluation</h2>
+      <p class="lede">Empirical evaluation of local LLMs across code understanding, code generation, RAG and repository-level tasks. Numbers load from <code>dashboard_data.json</code> (authoritative version <code>week4_v3_controlled</code>). Historical V1/V2 scores are excluded. Missing measurements display as N/A.</p>
+      <div class="kpis" id="kpis"></div>
+    </section>
+
+    <section id="models">
+      <h3>Model comparison</h3>
+      <p class="section-lead">Factual labels appear only when a model is the unique extremum on that measured metric in this benchmark. No model is labeled “best”.</p>
+      <div class="grid-3" id="modelCards"></div>
+    </section>
+
+    <section id="charts">
+      <h3>Charts</h3>
+      <p class="section-lead">All series are computed from the same 28 questions and the same retrieval configuration.</p>
+      <div class="charts">
+        <div class="card chart-card"><h4>Correctness by model</h4><div class="chart-box"><canvas id="cCorrect"></canvas></div></div>
+        <div class="card chart-card"><h4>Relevance by model</h4><div class="chart-box"><canvas id="cRel"></canvas></div></div>
+        <div class="card chart-card"><h4>Retrieval Hit@K</h4><div class="chart-box"><canvas id="cHit"></canvas></div></div>
+        <div class="card chart-card"><h4>MRR</h4><div class="chart-box"><canvas id="cMrr"></canvas></div></div>
+        <div class="card chart-card"><h4>Hallucination rate (any &gt; 0)</h4><div class="chart-box"><canvas id="cHall"></canvas></div></div>
+        <div class="card chart-card"><h4>Code test-pass rate</h4><div class="chart-box"><canvas id="cCode"></canvas></div></div>
+        <div class="card chart-card"><h4>Mean vs median latency (s)</h4><div class="chart-box"><canvas id="cLat"></canvas></div></div>
+        <div class="card chart-card"><h4>p95 latency (s)</h4><div class="chart-box"><canvas id="cP95"></canvas></div></div>
+        <div class="card chart-card"><h4>Token usage</h4><div class="chart-box"><canvas id="cTok"></canvas></div></div>
+        <div class="card chart-card"><h4>Throughput (tok/s)</h4><div class="chart-box"><canvas id="cTps"></canvas></div></div>
+        <div class="card chart-card"><h4>Memory (Ollama RSS, MB)</h4><div class="chart-box"><canvas id="cMem"></canvas></div></div>
+        <div class="card chart-card"><h4>CPU percent (sampled Ollama processes)</h4><div class="chart-box"><canvas id="cCpu"></canvas></div></div>
+      </div>
+    </section>
+
+    <section id="tradeoff">
+      <h3>Quality vs latency (this benchmark only)</h3>
+      <p class="section-lead">Observed trade-off for the frozen 28-task set. Not a universal model ranking.</p>
+      <div class="card chart-card"><h4>Quality vs latency</h4><div class="chart-box" style="height:320px"><canvas id="cPareto"></canvas></div></div>
+      <div class="card chart-card"><h4>Quality vs memory (this benchmark only)</h4><div class="chart-box" style="height:280px"><canvas id="cMemQ"></canvas></div></div>
+    </section>
+
+    <section id="categories">
+      <h3>Category analysis</h3>
+      <p class="section-lead">Category × model matrix from rubric scores and measured latency.</p>
+      <div class="card chart-card" style="margin-bottom:14px"><h4>Category correctness by model</h4><div class="chart-box" style="height:320px"><canvas id="cCat"></canvas></div></div>
+      <div class="table-wrap"><table id="catTable"></table></div>
+      <div class="interp" id="catInterp"></div>
+    </section>
+
+    <section id="rag">
+      <h3>RAG case-study inspector</h3>
+      <p class="section-lead">Traces are copied from actual evaluation outputs. Wrong answers that ignore a retrieved fact are labeled as context-use problems, not automatically as hallucinations.</p>
+      <div class="tabs" id="ragTabs"></div>
+      <div class="card case" id="ragCase"></div>
+    </section>
+
+    <section id="repo">
+      <h3>Repository-level understanding</h3>
+      <p class="section-lead">Live Week 3 application path used as the ground-truth call graph.</p>
+      <div class="flow" id="flow"></div>
+      <div class="table-wrap"><table id="repoTable"></table></div>
+      <div class="card case" style="margin-top:14px">
+        <h4>Inspect a repository question</h4>
+        <select id="repoSelect" style="margin:8px 0;padding:8px;border-radius:8px;background:#0f1a2e;color:#e8eef9;border:1px solid #24324a;max-width:100%"></select>
+        <pre id="repoDetail" class="mono-block">N/A</pre>
+      </div>
+    </section>
+
+    <section id="performance">
+      <h3>Performance and resources</h3>
+      <p class="section-lead" id="gpuNote"></p>
+      <div class="table-wrap"><table id="perfTable"></table></div>
+    </section>
+
+    <section id="method">
+      <h3>Methodology</h3>
+      <ul class="section-lead" style="padding-left:18px">
+        <li>Same 28 questions for every model.</li>
+        <li>Same retrieval setup, knowledge bases, repository index, top-k, temperature, and max output tokens.</li>
+        <li>Embedding model: nomic-embed-text:latest.</li>
+        <li>Repository questions: Chroma collection <span class="mono-block" style="display:inline">disaster_relief_code</span>.</li>
+        <li>RAG questions: Week 3 collection <span class="mono-block" style="display:inline">disaster_relief</span> via retrieve_documents().</li>
+        <li>Correctness 1.0 / 0.5 / 0.0; relevance 1.0 / 0.5 / 0.0; hallucination 0 / 0.5 / 1.0.</li>
+        <li>Hit@K / MRR / P@K / R@K from dataset relevant_files.</li>
+        <li>Latency from wall-clock generate calls; tokens and durations from Ollama.</li>
+        <li>CPU/RSS sampled from local Ollama processes with psutil.</li>
+        <li>Code-generation snippets executed against backend/.</li>
+        <li>Failed Ollama calls are recorded, retried twice, and excluded from quality averages.</li>
+      </ul>
+    </section>
+
+    <section id="downloads">
+      <h3>Downloads</h3>
+      <div class="downloads">
+        <a class="btn" href="../exports/week4_evaluation.xlsx">Excel report</a>
+        <a class="btn" href="../reports/week4_technical_report.md">Technical report</a>
+        <a class="btn" href="../reports/week4_summary.md">Executive summary</a>
+        <a class="btn" href="../results/model_evaluation_results.json">Raw JSON results</a>
+        <a class="btn" href="../dataset/evaluation_dataset.csv">Dataset CSV</a>
+      </div>
+      <p class="note">Open this dashboard as a file alongside benchmark_data.js. If charts are empty, regenerate reports after evaluation.</p>
+    </section>
+    <footer>DisasterRelief-AI Week 4 evaluation dashboard. Values come from generated benchmark_data.js.</footer>
+  </main>
+
+  <script>
+    const na = (v, d=3) => (v === null || v === undefined || Number.isNaN(v)) ? "N/A" : Number(v).toFixed(d);
+    const boot = async () => {
+      let B = window.BENCHMARK;
+      try {
+        const res = await fetch("./dashboard_data.json");
+        if (res.ok) B = await res.json();
+      } catch (err) { /* file:// fallback uses benchmark_data.js */ }
+      window.BENCHMARK = B;
+      renderDashboard(B);
+    };
+    const renderDashboard = (B) => {
+    const na = (v, d=3) => (v === null || v === undefined || Number.isNaN(v)) ? "N/A" : Number(v).toFixed(d);
+    if (!B) {
+      document.getElementById("kpis").innerHTML = "<div class='kpi'><div class='label'>Data</div><div class='value'>N/A</div><div class='sub'>benchmark_data.js missing. Run generate_report.py.</div></div>";
+    } else {
+      const s = B.summary;
+      const models = s.models || [];
+      const stats = s.model_stats || {};
+      const labels = s.factual_labels || {};
+      const kpis = [
+        ["Evaluation tasks", s.questions, "Frozen dataset"],
+        ["LLM models", models.length, models.join(", ")],
+        ["Categories", 7, "E / CR / D / B / CG / RF / RG"],
+        ["Planned evaluations", s.planned_experiments, "28 × 3"],
+        ["Successful", s.successful_experiments, "Ollama generations that returned text"],
+        ["Failed", s.failed_experiments, "Recorded failures, not fabricated"],
+        ["Evaluation version", s.evaluation_version, s.evaluation_date],
+        ["Embedding", "nomic-embed-text", "top-k = " + s.top_k],
+        ["Temperature", s.temperature, "num_predict = " + s.num_predict],
+      ];
+      document.getElementById("kpis").innerHTML = kpis.map(([l,v,sub]) =>
+        `<div class="kpi"><div class="label">${l}</div><div class="value">${v ?? "N/A"}</div><div class="sub">${sub}</div></div>`
+      ).join("");
+
+      document.getElementById("modelCards").innerHTML = models.map(m => {
+        const st = stats[m] || {};
+        const labs = (labels[m] || []).map(x => `<span class="badge">${x}</span>`).join("") || `<span class="badge neutral">No unique extremal label</span>`;
+        return `<article class="card model-card">
+          <h4>${st.display || m}</h4>
+          <div class="badges">${labs}</div>
+          <dl>
+            <dt>Correctness</dt><dd>${na(st.correctness)}</dd>
+            <dt>Relevance</dt><dd>${na(st.relevance)}</dd>
+            <dt>Retrieval Hit@K</dt><dd>${na(st.hit_at_k)}</dd>
+            <dt>MRR</dt><dd>${na(st.mrr)}</dd>
+            <dt>Hallucination</dt><dd>${na(st.hallucination)}</dd>
+            <dt>Code test-pass rate</dt><dd>${na(st.test_pass_rate)}</dd>
+            <dt>Task/logic correctness</dt><dd>${na(st.task_logic_correctness)}</dd>
+            <dt>Mean latency (s)</dt><dd>${na(st.mean_latency,2)}</dd>
+            <dt>Median latency (s)</dt><dd>${na(st.median_latency,2)}</dd>
+            <dt>p95 latency (s)</dt><dd>${na(st.p95_latency,2)}</dd>
+            <dt>Generated tokens</dt><dd>${na(st.generated_tokens,1)}</dd>
+            <dt>Avg total tokens</dt><dd>${na(st.total_tokens,1)}</dd>
+            <dt>Throughput</dt><dd>${na(st.throughput,2)}</dd>
+            <dt>Memory (MB)</dt><dd>${na(st.memory_mb,1)}</dd>
+            <dt>CPU %</dt><dd>${na(st.cpu_percent,1)}</dd>
+            <dt>Failure rate</dt><dd>${na(st.failure_rate,4)}</dd>
+          </dl>
+        </article>`;
+      }).join("");
+
+      const names = models.map(m => (stats[m]||{}).display || m);
+      const series = (key) => models.map(m => stats[m]?.[key] ?? null);
+      const tick = { color: "#93a1b8" };
+      const grid = { color: "rgba(36,50,74,.8)" };
+      Chart.defaults.color = "#93a1b8";
+      Chart.defaults.borderColor = "rgba(36,50,74,.9)";
+      Chart.defaults.font.family = "IBM Plex Sans";
+      const bar = (id, label, data, color="#3dd6c6") => new Chart(document.getElementById(id), {
+        type: "bar",
+        data: { labels: names, datasets: [{ label, data, backgroundColor: color, borderRadius: 6 }] },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: tick, grid }, y: { ticks: tick, grid, beginAtZero: true } } }
+      });
+      bar("cCorrect", "Correctness", series("correctness"));
+      bar("cRel", "Relevance", series("relevance"), "#7aa2ff");
+      bar("cHit", "Hit@K", series("hit_at_k"), "#5eeaad");
+      bar("cMrr", "MRR", series("mrr"), "#9b8cff");
+      bar("cHall", "Hallucination rate", series("hallucination_rate_any"), "#f07178");
+      bar("cCode", "Code pass", series("test_pass_rate"), "#f0b429");
+      new Chart(document.getElementById("cLat"), {
+        type: "bar",
+        data: { labels: names, datasets: [
+          { label: "Mean", data: series("mean_latency"), backgroundColor: "#3dd6c6" },
+          { label: "Median", data: series("median_latency"), backgroundColor: "#7aa2ff" }
+        ]},
+        options: { responsive: true, maintainAspectRatio: false, scales: { x: { ticks: tick, grid }, y: { ticks: tick, grid, beginAtZero: true } } }
+      });
+      bar("cP95", "p95", series("p95_latency"), "#f0b429");
+      new Chart(document.getElementById("cTok"), {
+        type: "bar",
+        data: { labels: names, datasets: [
+          { label: "Prompt", data: series("prompt_tokens"), backgroundColor: "#7aa2ff" },
+          { label: "Generated", data: series("generated_tokens"), backgroundColor: "#3dd6c6" }
+        ]},
+        options: { responsive: true, maintainAspectRatio: false, scales: { x: { ticks: tick, grid }, y: { ticks: tick, grid, beginAtZero: true } } }
+      });
+      bar("cTps", "Throughput", series("throughput"));
+      bar("cMem", "Memory MB", series("memory_mb"), "#9b8cff");
+      bar("cCpu", "CPU %", series("cpu_percent"), "#f07178");
+      new Chart(document.getElementById("cPareto"), {
+        type: "scatter",
+        data: { datasets: models.map((m, i) => ({
+          label: names[i],
+          data: [{ x: stats[m]?.mean_latency, y: stats[m]?.correctness }],
+          backgroundColor: ["#3dd6c6", "#7aa2ff", "#f0b429"][i % 3],
+          pointRadius: 8
+        }))},
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { title: { display: true, text: "Observed benchmark trade-off in the local evaluation environment." } },
+          scales: {
+            x: { title: { display: true, text: "Mean latency (s)" }, ticks: tick, grid },
+            y: { title: { display: true, text: "Correctness" }, ticks: tick, grid, min: 0, max: 1 }
+          }
+        }
+      });
+      new Chart(document.getElementById("cMemQ"), {
+        type: "scatter",
+        data: { datasets: models.map((m, i) => ({
+          label: names[i],
+          data: [{ x: stats[m]?.memory_mb, y: stats[m]?.correctness }],
+          backgroundColor: ["#3dd6c6", "#7aa2ff", "#f0b429"][i % 3],
+          pointRadius: 8
+        }))},
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { title: { display: true, text: "Observed benchmark trade-off in the local evaluation environment." } },
+          scales: {
+            x: { title: { display: true, text: "Mean Ollama RSS (MB)" }, ticks: tick, grid },
+            y: { title: { display: true, text: "Correctness" }, ticks: tick, grid, min: 0, max: 1 }
+          }
+        }
+      });
+
+      const matrix = s.category_matrix || [];
+      const cats = [...new Set(matrix.map(r => r.category))];
+      new Chart(document.getElementById("cCat"), {
+        type: "bar",
+        data: {
+          labels: cats,
+          datasets: models.map((m, i) => ({
+            label: names[i],
+            data: cats.map(cat => (matrix.find(r => r.model===m && r.category===cat)||{}).correctness),
+            backgroundColor: ["#3dd6c6", "#7aa2ff", "#f0b429"][i % 3],
+            borderRadius: 4
+          }))
+        },
+        options: { responsive: true, maintainAspectRatio: false, scales: { x: { ticks: tick, grid }, y: { ticks: tick, grid, beginAtZero: true, max: 1 } } }
+      });
+      document.getElementById("catTable").innerHTML = `<thead><tr><th>Category</th><th>Model</th><th>Correctness</th><th>Relevance</th><th>Retrieval</th><th>Hallucination</th><th>Latency</th></tr></thead>` +
+        `<tbody>${matrix.map(r => `<tr><td>${r.category}</td><td>${r.display}</td><td>${na(r.correctness)}</td><td>${na(r.relevance)}</td><td>${na(r.hit_at_k)}</td><td>${na(r.hallucination)}</td><td>${na(r.latency,2)}</td></tr>`).join("")}</tbody>`;
+      const interp = B.interpretations || {};
+      document.getElementById("catInterp").innerHTML = Object.entries(interp).map(([k,v]) => `<p><strong>${k}.</strong> ${v}</p>`).join("");
+
+      const cases = B.rag_cases || [];
+      const tabs = document.getElementById("ragTabs");
+      const pane = document.getElementById("ragCase");
+      const renderCase = (c) => {
+        const sc = c.scores || {};
+        pane.innerHTML = `
+          <h4>${c.question_id} · ${c.model}</h4>
+          <div class="meta">${c.behavior || ""} · correctness ${na(sc.correctness)} · relevance ${na(sc.relevance)} · hallucination ${na(sc.hallucination)} · hit@K ${c.retrieval?.hit_at_k ?? "N/A"}</div>
+          <p style="margin:10px 0;font-family:var(--mono);font-size:12px;color:var(--accent)">Question ↓ Retrieval ↓ Context ↓ LLM ↓ Response</p>
+          <div class="pair">
+            <div><strong>Ground truth</strong><div class="mono-block">${c.ground_truth || "N/A"}</div></div>
+            <div><strong>Model response</strong><div class="mono-block">${c.model_response || "N/A"}</div></div>
+          </div>
+          <p style="margin-top:10px"><strong>Key relevant information</strong>: ${(c.key_relevant_information||[]).join(", ") || "N/A"}</p>
+          <p><strong>Missed information</strong>: ${(c.missed_information||[]).join(", ") || "None listed"}</p>
+          <p><strong>Analysis</strong>: ${c.analysis || "N/A"}</p>
+          <details><summary>Retrieved documents / chunks</summary><pre>${JSON.stringify(c.retrieved_documents || [], null, 2)}</pre></details>
+          <details><summary>Irrelevant retrieved excerpts</summary><pre>${JSON.stringify(c.irrelevant_information || [], null, 2)}</pre></details>
+          <details><summary>Full retrieved context</summary><pre>${c.retrieved_context || "N/A"}</pre></details>
+        `;
+      };
+      tabs.innerHTML = cases.map((c,i) => `<button class="tab ${i===0?"active":""}" data-i="${i}">${c.question_id} / ${(c.model||"").split(":")[0]}</button>`).join("") || "<span class='note'>N/A</span>";
+      if (cases[0]) renderCase(cases[0]);
+      tabs.querySelectorAll(".tab").forEach(btn => btn.addEventListener("click", () => {
+        tabs.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderCase(cases[Number(btn.dataset.i)]);
+      }));
+
+      const flow = B.repository?.call_graph || [];
+      document.getElementById("flow").innerHTML = flow.flatMap((step,i) => {
+        const node = `<span>${step}</span>`;
+        return i < flow.length - 1 ? [node, `<span class="arrow">↓</span>`] : [node];
+      }).join("");
+      const repoAgg = B.repository?.aggregates || {};
+      document.getElementById("repoTable").innerHTML = `<thead><tr><th>Model</th><th>File identification</th><th>Dependency reasoning</th><th>Overall</th></tr></thead><tbody>${
+        Object.entries(repoAgg).map(([m,v]) => `<tr><td>${m}</td><td>${na(v.mean_file_identification_score)}</td><td>${na(v.mean_dependency_reasoning_score)}</td><td>${na(v.mean_overall_score)}</td></tr>`).join("")
+      }</tbody>`;
+
+      const repoRows = B.repository?.per_question || [];
+      const sel = document.getElementById("repoSelect");
+      const detail = document.getElementById("repoDetail");
+      if (sel) {
+        sel.innerHTML = repoRows.map((row, i) => `<option value="${i}">${row.question_id} · ${row.model}</option>`).join("");
+        const show = (i) => {
+          const row = repoRows[i];
+          detail.textContent = row ? JSON.stringify({
+            question: row.question,
+            expected_files: row.expected_files,
+            retrieved_files: row.retrieved_files,
+            identified_files_in_answer: row.identified_files_in_answer,
+            file_identification_score: row.file_identification_score,
+            dependency_reasoning_score: row.dependency_reasoning_score,
+            overall_score: row.overall_score,
+            model_answer: row.model_answer
+          }, null, 2) : "N/A";
+        };
+        sel.onchange = () => show(Number(sel.value));
+        if (repoRows[0]) show(0);
+      }
+
+      document.getElementById("gpuNote").textContent = B.gpu_note || "GPU utilization was not included because a reliable per-model GPU utilization measurement was not available in the evaluation environment.";
+      document.getElementById("perfTable").innerHTML = `<thead><tr><th>Model</th><th>Mean</th><th>Median</th><th>p95</th><th>Retrieval</th><th>Tokens</th><th>Throughput</th><th>Memory MB</th><th>CPU %</th><th>Fail</th></tr></thead><tbody>${
+        models.map(m => {
+          const st = stats[m]||{};
+          return `<tr><td>${st.display||m}</td><td>${na(st.mean_latency,2)}</td><td>${na(st.median_latency,2)}</td><td>${na(st.p95_latency,2)}</td><td>${na(st.retrieval_latency,2)}</td><td>${na(st.total_tokens,1)}</td><td>${na(st.throughput,2)}</td><td>${na(st.memory_mb,1)}</td><td>${na(st.cpu_percent,1)}</td><td>${na(st.failure_rate,4)}</td></tr>`;
+        }).join("")
+      }</tbody>`;
+    }
+    };
+    boot();
+  </script>
+</body>
+</html>

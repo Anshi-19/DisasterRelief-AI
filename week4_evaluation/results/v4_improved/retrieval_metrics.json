@@ -1,0 +1,2889 @@
+{
+  "per_question": [
+    {
+      "model": "codellama:latest",
+      "question_id": "E01",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/benchmarkpanel.jsx"
+      ],
+      "matched_expected_files": [
+        "frontend/src/App.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.625,
+      "recall_at_k": 0.5,
+      "unique_expected_hit_precision": 0.375,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "E01",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/benchmarkpanel.jsx"
+      ],
+      "matched_expected_files": [
+        "frontend/src/App.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.625,
+      "recall_at_k": 0.5,
+      "unique_expected_hit_precision": 0.375,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "E01",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/benchmarkpanel.jsx"
+      ],
+      "matched_expected_files": [
+        "frontend/src/App.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.625,
+      "recall_at_k": 0.5,
+      "unique_expected_hit_precision": 0.375,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "E02",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/rag/retrieval.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/ingestion/ingest.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 0.5,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "E02",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/rag/retrieval.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/ingestion/ingest.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 0.5,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "E02",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/rag/retrieval.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/ingestion/ingest.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 0.5,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "E03",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.375,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "E03",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.375,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "E03",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.375,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "E04",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.375,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "E04",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.375,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "E04",
+      "category": "Explanation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.375,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CR01",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/main.py"
+      ],
+      "retrieved_files": [
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/rag/rag_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/main.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CR01",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/main.py"
+      ],
+      "retrieved_files": [
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/rag/rag_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/main.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CR01",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/main.py"
+      ],
+      "retrieved_files": [
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/rag/rag_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/main.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CR02",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/main.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CR02",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/main.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CR02",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/main.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CR03",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/services/retrieval_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CR03",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/services/retrieval_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CR03",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/services/retrieval_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CR04",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/ingestion/ingest.py",
+        "backend/main.py",
+        "frontend/src/week4benchmark.js"
+      ],
+      "matched_expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CR04",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/ingestion/ingest.py",
+        "backend/main.py",
+        "frontend/src/week4benchmark.js"
+      ],
+      "matched_expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CR04",
+      "category": "Code Retrieval",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/ingestion/ingest.py",
+        "backend/main.py",
+        "frontend/src/week4benchmark.js"
+      ],
+      "matched_expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.125,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "D01",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/main.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/services/embedding_service.py",
+        "backend/rag/rag_service.py"
+      ],
+      "matched_expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.75,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.75,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "D01",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/main.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/services/embedding_service.py",
+        "backend/rag/rag_service.py"
+      ],
+      "matched_expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.75,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.75,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "D01",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/main.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/services/embedding_service.py",
+        "backend/rag/rag_service.py"
+      ],
+      "matched_expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.75,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.75,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "D02",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "D02",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "D02",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "D03",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/embedding_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.75,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.375,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "D03",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/embedding_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.75,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.375,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "D03",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/embedding_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.75,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.375,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "D04",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5,
+      "precision_at_k": 0.25,
+      "recall_at_k": 0.5,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "D04",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5,
+      "precision_at_k": 0.25,
+      "recall_at_k": 0.5,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "D04",
+      "category": "Dependency Understanding",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5,
+      "precision_at_k": 0.25,
+      "recall_at_k": 0.5,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "B01",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "B01",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "B01",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "B02",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "B02",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "B02",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.25,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "B03",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/rag/retrieval.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 3,
+      "reciprocal_rank": 0.3333,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "B03",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/rag/retrieval.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 3,
+      "reciprocal_rank": 0.3333,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "B03",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/rag/retrieval.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 3,
+      "reciprocal_rank": 0.3333,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "B04",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/rag/retrieval.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.625,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.375,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "B04",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/rag/retrieval.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.625,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.375,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "B04",
+      "category": "Bug Analysis",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/rag/retrieval.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.625,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.375,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CG01",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CG01",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CG01",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CG02",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CG02",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CG02",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CG03",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/main.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [],
+      "hit_at_k": false,
+      "k": 8,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0.0,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "unique_expected_hit_precision": 0.0,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CG03",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/main.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [],
+      "hit_at_k": false,
+      "k": 8,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0.0,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "unique_expected_hit_precision": 0.0,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CG03",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/main.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [],
+      "hit_at_k": false,
+      "k": 8,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0.0,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "unique_expected_hit_precision": 0.0,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CG04",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CG04",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CG04",
+      "category": "Code Generation",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RF01",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/rag/retrieval.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/retrieval_service.py",
+        "backend/main.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RF01",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/rag/retrieval.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/retrieval_service.py",
+        "backend/main.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RF01",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/rag/retrieval.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/retrieval_service.py",
+        "backend/main.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RF02",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/embedding_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RF02",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/embedding_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RF02",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/embedding_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RF03",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RF03",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RF03",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "matched_expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RF04",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/embedding_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/main.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RF04",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/embedding_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/main.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RF04",
+      "category": "Refactoring",
+      "retrieval_source": "repository",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/embedding_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/main.py"
+      ],
+      "matched_expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RG01",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/flood/flood_guidelines.pdf"
+      ],
+      "retrieved_files": [
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/flood/flood_guidelines.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RG01",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/flood/flood_guidelines.pdf"
+      ],
+      "retrieved_files": [
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/flood/flood_guidelines.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RG01",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/flood/flood_guidelines.pdf"
+      ],
+      "retrieved_files": [
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/flood/flood_guidelines.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RG02",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/earthquake/earthquake_guidelines.pdf"
+      ],
+      "retrieved_files": [
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/earthquake/earthquake_guidelines.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RG02",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/earthquake/earthquake_guidelines.pdf"
+      ],
+      "retrieved_files": [
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/earthquake/earthquake_guidelines.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RG02",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/earthquake/earthquake_guidelines.pdf"
+      ],
+      "retrieved_files": [
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of earthquakes"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/earthquake/earthquake_guidelines.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RG03",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/cyclone/cyclone_guidelines.pdf"
+      ],
+      "retrieved_files": [
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/cyclone/cyclone_guidelines.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RG03",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/cyclone/cyclone_guidelines.pdf"
+      ],
+      "retrieved_files": [
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/cyclone/cyclone_guidelines.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RG03",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/cyclone/cyclone_guidelines.pdf"
+      ],
+      "retrieved_files": [
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones",
+        "national disaster management guidelines: management of cyclones"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/cyclone/cyclone_guidelines.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RG04",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/common/mha_recovery_reconstruction_2024.pdf"
+      ],
+      "retrieved_files": [
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of floods"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/common/mha_recovery_reconstruction_2024.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RG04",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/common/mha_recovery_reconstruction_2024.pdf"
+      ],
+      "retrieved_files": [
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of floods"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/common/mha_recovery_reconstruction_2024.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RG04",
+      "category": "RAG",
+      "retrieval_source": "disaster_knowledge_base",
+      "expected_files": [
+        "knowledge_base/common/mha_recovery_reconstruction_2024.pdf"
+      ],
+      "retrieved_files": [
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "guidelines on constitution and administration of recovery and reconstruction funding window",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of floods",
+        "national disaster management guidelines: management of earthquakes",
+        "national disaster management guidelines: management of floods"
+      ],
+      "matched_expected_files": [
+        "knowledge_base/common/mha_recovery_reconstruction_2024.pdf"
+      ],
+      "hit_at_k": true,
+      "k": 8,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "unique_expected_hit_precision": 0.125,
+      "retrieved_chunk_count": 8,
+      "scoring_method": "ground_truth_file_match"
+    }
+  ],
+  "aggregates": {
+    "k": 8,
+    "definition": {
+      "hit_at_k": "1 if at least one ground-truth relevant file/document appears in the top-K retrieved results.",
+      "mrr": "Mean of 1/rank of the first relevant retrieved result; 0 if none.",
+      "precision_at_k": "Fraction of retrieved chunks whose file/document matches a ground-truth relevant item.",
+      "recall_at_k": "Fraction of ground-truth relevant files/documents found in the retrieved set.",
+      "matching": "Path containment, basename match, and document-title aliases for NDMA/MHA PDFs. Not keyword scoring of answers."
+    },
+    "models": {
+      "codellama:latest": {
+        "n": 28,
+        "hit_at_k": 0.9643,
+        "mrr": 0.9226,
+        "precision_at_k": 0.4018,
+        "recall_at_k": 0.9107
+      },
+      "qwen2.5-coder:7b": {
+        "n": 28,
+        "hit_at_k": 0.9643,
+        "mrr": 0.9226,
+        "precision_at_k": 0.4018,
+        "recall_at_k": 0.9107
+      },
+      "deepseek-coder:6.7b": {
+        "n": 28,
+        "hit_at_k": 0.9643,
+        "mrr": 0.9226,
+        "precision_at_k": 0.4018,
+        "recall_at_k": 0.9107
+      }
+    },
+    "by_category": {
+      "codellama:latest::Explanation": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.4062,
+        "recall_at_k": 0.75
+      },
+      "qwen2.5-coder:7b::Explanation": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.4062,
+        "recall_at_k": 0.75
+      },
+      "deepseek-coder:6.7b::Explanation": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.4062,
+        "recall_at_k": 0.75
+      },
+      "codellama:latest::Code Retrieval": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.125,
+        "recall_at_k": 1.0
+      },
+      "qwen2.5-coder:7b::Code Retrieval": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.125,
+        "recall_at_k": 1.0
+      },
+      "deepseek-coder:6.7b::Code Retrieval": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.125,
+        "recall_at_k": 1.0
+      },
+      "codellama:latest::Dependency Understanding": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 0.875,
+        "precision_at_k": 0.5625,
+        "recall_at_k": 0.875
+      },
+      "qwen2.5-coder:7b::Dependency Understanding": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 0.875,
+        "precision_at_k": 0.5625,
+        "recall_at_k": 0.875
+      },
+      "deepseek-coder:6.7b::Dependency Understanding": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 0.875,
+        "precision_at_k": 0.5625,
+        "recall_at_k": 0.875
+      },
+      "codellama:latest::Bug Analysis": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 0.8333,
+        "precision_at_k": 0.4062,
+        "recall_at_k": 1.0
+      },
+      "qwen2.5-coder:7b::Bug Analysis": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 0.8333,
+        "precision_at_k": 0.4062,
+        "recall_at_k": 1.0
+      },
+      "deepseek-coder:6.7b::Bug Analysis": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 0.8333,
+        "precision_at_k": 0.4062,
+        "recall_at_k": 1.0
+      },
+      "codellama:latest::Code Generation": {
+        "n": 4,
+        "hit_at_k": 0.75,
+        "mrr": 0.75,
+        "precision_at_k": 0.1875,
+        "recall_at_k": 0.75
+      },
+      "qwen2.5-coder:7b::Code Generation": {
+        "n": 4,
+        "hit_at_k": 0.75,
+        "mrr": 0.75,
+        "precision_at_k": 0.1875,
+        "recall_at_k": 0.75
+      },
+      "deepseek-coder:6.7b::Code Generation": {
+        "n": 4,
+        "hit_at_k": 0.75,
+        "mrr": 0.75,
+        "precision_at_k": 0.1875,
+        "recall_at_k": 0.75
+      },
+      "codellama:latest::Refactoring": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.25,
+        "recall_at_k": 1.0
+      },
+      "qwen2.5-coder:7b::Refactoring": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.25,
+        "recall_at_k": 1.0
+      },
+      "deepseek-coder:6.7b::Refactoring": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.25,
+        "recall_at_k": 1.0
+      },
+      "codellama:latest::RAG": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.875,
+        "recall_at_k": 1.0
+      },
+      "qwen2.5-coder:7b::RAG": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.875,
+        "recall_at_k": 1.0
+      },
+      "deepseek-coder:6.7b::RAG": {
+        "n": 4,
+        "hit_at_k": 1,
+        "mrr": 1.0,
+        "precision_at_k": 0.875,
+        "recall_at_k": 1.0
+      }
+    }
+  }
+}

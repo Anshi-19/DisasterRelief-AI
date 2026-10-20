@@ -1,0 +1,30 @@
+SOURCE: Ministry of Home Affairs / National Disaster Management Information System
+TITLE: Response Fund
+SOURCE TYPE: Official Government of India web page
+JURISDICTION: India
+RETRIEVED: 2026
+
+URL:
+https://ndmindia.mha.gov.in/ndmi/response-fund
+
+PURPOSE:
+This source provides information about the State Disaster Response Fund (SDRF),
+National Disaster Response Fund (NDRF), State Disaster Mitigation Fund (SDMF),
+and National Disaster Mitigation Fund (NDMF).
+
+RELEVANCE:
+The source states that SDRF is the primary fund available with State Governments
+for responses to notified disasters and that SDRF is used for immediate relief.
+
+The currently listed SDRF disaster categories include:
+- Cyclone
+- Earthquake
+- Flood
+among other notified disasters.
+
+The source also explains that NDRF supplements SDRF in cases of disasters of
+severe nature when adequate funds are not available in SDRF.
+
+IMPORTANT:
+This file is a source record, not yet the final RAG corpus. The actual source
+content will be processed and chunked through the ingestion pipeline.

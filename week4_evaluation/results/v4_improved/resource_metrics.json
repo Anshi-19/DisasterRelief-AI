@@ -1,0 +1,61 @@
+{
+  "measurement_method": "During each Ollama generation, a background sampler queried local processes whose name or command line contained 'ollama' approximately every 0.4 seconds using psutil. RSS is process resident set size. CPU percent is the sum of sampled Ollama process CPU percentages and can exceed 100 on multi-core hosts. Token timings come from Ollama's generate API duration fields.",
+  "gpu_utilization": null,
+  "gpu_note": "GPU utilization was not included because a reliable per-model GPU utilization measurement was not available in the evaluation environment.",
+  "models": {
+    "codellama:latest": {
+      "experiments": 28,
+      "successful": 28,
+      "failed": 0,
+      "failure_rate": 0.0,
+      "average_latency": 26.697,
+      "median_latency": 26.288,
+      "p95_latency": 39.96,
+      "average_retrieval_latency": 0.522,
+      "average_prompt_tokens": 2254.6,
+      "average_generated_tokens": 363.4,
+      "average_total_tokens": 2618,
+      "average_throughput": 22.622,
+      "average_model_load_duration": 2.1817,
+      "average_prompt_eval_duration": 8.247,
+      "average_memory_mb": 5620.89,
+      "average_cpu_percent": 28.92
+    },
+    "qwen2.5-coder:7b": {
+      "experiments": 28,
+      "successful": 28,
+      "failed": 0,
+      "failure_rate": 0.0,
+      "average_latency": 20.656,
+      "median_latency": 17.594,
+      "p95_latency": 36.774,
+      "average_retrieval_latency": 0.522,
+      "average_prompt_tokens": 2648.6,
+      "average_generated_tokens": 202.9,
+      "average_total_tokens": 2851.5,
+      "average_throughput": 25.43,
+      "average_model_load_duration": 2.4971,
+      "average_prompt_eval_duration": 10.0205,
+      "average_memory_mb": 4585.99,
+      "average_cpu_percent": 22.18
+    },
+    "deepseek-coder:6.7b": {
+      "experiments": 28,
+      "successful": 28,
+      "failed": 0,
+      "failure_rate": 0.0,
+      "average_latency": 24.322,
+      "median_latency": 24.382,
+      "p95_latency": 31.041,
+      "average_retrieval_latency": 0.522,
+      "average_prompt_tokens": 2258.7,
+      "average_generated_tokens": 313.4,
+      "average_total_tokens": 2572.1,
+      "average_throughput": 22.888,
+      "average_model_load_duration": 2.299,
+      "average_prompt_eval_duration": 8.2774,
+      "average_memory_mb": 5501.87,
+      "average_cpu_percent": 27.4
+    }
+  }
+}

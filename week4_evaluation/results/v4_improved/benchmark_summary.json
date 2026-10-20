@@ -1,0 +1,616 @@
+{
+  "evaluation_version": "week4_v4_improved",
+  "evaluation_date": "2026-09-18",
+  "generated_at": "2026-09-18T04:10:24.288386+00:00",
+  "questions": 28,
+  "models": [
+    "codellama:latest",
+    "qwen2.5-coder:7b",
+    "deepseek-coder:6.7b"
+  ],
+  "planned_experiments": 84,
+  "recorded_experiments": 84,
+  "successful_experiments": 84,
+  "failed_experiments": 0,
+  "embedding_model": "nomic-embed-text:latest",
+  "top_k": 8,
+  "temperature": 0.0,
+  "num_predict": 640,
+  "model_stats": {
+    "codellama:latest": {
+      "display": "CodeLlama",
+      "correctness": 0.5,
+      "relevance": 0.6429,
+      "hallucination": 0.1071,
+      "hallucination_rate_any": 0.1786,
+      "hit_at_k": 0.9643,
+      "mrr": 0.9226,
+      "precision_at_k": 0.4018,
+      "recall_at_k": 0.9107,
+      "mean_latency": 26.697,
+      "median_latency": 26.288,
+      "p95_latency": 39.96,
+      "retrieval_latency": 0.522,
+      "prompt_tokens": 2254.6,
+      "generated_tokens": 363.4,
+      "total_tokens": 2618,
+      "throughput": 22.622,
+      "memory_mb": 5620.89,
+      "cpu_percent": 28.92,
+      "failure_rate": 0.0,
+      "successful": 28,
+      "failed": 0,
+      "experiments": 28,
+      "test_pass_rate": 0.0,
+      "task_logic_correctness": 0.375,
+      "load_duration": 2.1817,
+      "prompt_eval_duration": 8.247
+    },
+    "qwen2.5-coder:7b": {
+      "display": "Qwen2.5-Coder",
+      "correctness": 0.8393,
+      "relevance": 0.8571,
+      "hallucination": 0.0357,
+      "hallucination_rate_any": 0.0714,
+      "hit_at_k": 0.9643,
+      "mrr": 0.9226,
+      "precision_at_k": 0.4018,
+      "recall_at_k": 0.9107,
+      "mean_latency": 20.656,
+      "median_latency": 17.594,
+      "p95_latency": 36.774,
+      "retrieval_latency": 0.522,
+      "prompt_tokens": 2648.6,
+      "generated_tokens": 202.9,
+      "total_tokens": 2851.5,
+      "throughput": 25.43,
+      "memory_mb": 4585.99,
+      "cpu_percent": 22.18,
+      "failure_rate": 0.0,
+      "successful": 28,
+      "failed": 0,
+      "experiments": 28,
+      "test_pass_rate": 0.75,
+      "task_logic_correctness": 0.875,
+      "load_duration": 2.4971,
+      "prompt_eval_duration": 10.0205
+    },
+    "deepseek-coder:6.7b": {
+      "display": "DeepSeek-Coder",
+      "correctness": 0.5,
+      "relevance": 0.6607,
+      "hallucination": 0.0893,
+      "hallucination_rate_any": 0.1429,
+      "hit_at_k": 0.9643,
+      "mrr": 0.9226,
+      "precision_at_k": 0.4018,
+      "recall_at_k": 0.9107,
+      "mean_latency": 24.322,
+      "median_latency": 24.382,
+      "p95_latency": 31.041,
+      "retrieval_latency": 0.522,
+      "prompt_tokens": 2258.7,
+      "generated_tokens": 313.4,
+      "total_tokens": 2572.1,
+      "throughput": 22.888,
+      "memory_mb": 5501.87,
+      "cpu_percent": 27.4,
+      "failure_rate": 0.0,
+      "successful": 28,
+      "failed": 0,
+      "experiments": 28,
+      "test_pass_rate": 0.25,
+      "task_logic_correctness": 0.625,
+      "load_duration": 2.299,
+      "prompt_eval_duration": 8.2774
+    }
+  },
+  "factual_labels": {
+    "codellama:latest": [],
+    "qwen2.5-coder:7b": [
+      "Highest measured correctness",
+      "Highest measured relevance",
+      "Lowest measured mean latency",
+      "Lowest measured median latency",
+      "Highest code test-pass rate",
+      "Highest measured generation throughput"
+    ],
+    "deepseek-coder:6.7b": []
+  },
+  "category_matrix": [
+    {
+      "category": "Bug Analysis",
+      "model": "codellama:latest",
+      "display": "CodeLlama",
+      "correctness": 0.75,
+      "relevance": 0.75,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 0.8333,
+      "latency": 20.583
+    },
+    {
+      "category": "Bug Analysis",
+      "model": "qwen2.5-coder:7b",
+      "display": "Qwen2.5-Coder",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 0.8333,
+      "latency": 15.28
+    },
+    {
+      "category": "Bug Analysis",
+      "model": "deepseek-coder:6.7b",
+      "display": "DeepSeek-Coder",
+      "correctness": 0.75,
+      "relevance": 0.75,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 0.8333,
+      "latency": 23.759
+    },
+    {
+      "category": "Code Generation",
+      "model": "codellama:latest",
+      "display": "CodeLlama",
+      "correctness": 0.375,
+      "relevance": 0.5,
+      "hallucination": 0.25,
+      "hit_at_k": 0.75,
+      "mrr": 0.75,
+      "latency": 25.677
+    },
+    {
+      "category": "Code Generation",
+      "model": "qwen2.5-coder:7b",
+      "display": "Qwen2.5-Coder",
+      "correctness": 0.875,
+      "relevance": 0.875,
+      "hallucination": 0.0,
+      "hit_at_k": 0.75,
+      "mrr": 0.75,
+      "latency": 18.351
+    },
+    {
+      "category": "Code Generation",
+      "model": "deepseek-coder:6.7b",
+      "display": "DeepSeek-Coder",
+      "correctness": 0.625,
+      "relevance": 0.625,
+      "hallucination": 0.25,
+      "hit_at_k": 0.75,
+      "mrr": 0.75,
+      "latency": 24.29
+    },
+    {
+      "category": "Code Retrieval",
+      "model": "codellama:latest",
+      "display": "CodeLlama",
+      "correctness": 0.25,
+      "relevance": 0.625,
+      "hallucination": 0.125,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 25.5
+    },
+    {
+      "category": "Code Retrieval",
+      "model": "qwen2.5-coder:7b",
+      "display": "Qwen2.5-Coder",
+      "correctness": 0.75,
+      "relevance": 0.875,
+      "hallucination": 0.25,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 15.585
+    },
+    {
+      "category": "Code Retrieval",
+      "model": "deepseek-coder:6.7b",
+      "display": "DeepSeek-Coder",
+      "correctness": 0.25,
+      "relevance": 0.625,
+      "hallucination": 0.125,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 22.915
+    },
+    {
+      "category": "Dependency Understanding",
+      "model": "codellama:latest",
+      "display": "CodeLlama",
+      "correctness": 0.625,
+      "relevance": 0.75,
+      "hallucination": 0.125,
+      "hit_at_k": 1,
+      "mrr": 0.875,
+      "latency": 27.005
+    },
+    {
+      "category": "Dependency Understanding",
+      "model": "qwen2.5-coder:7b",
+      "display": "Qwen2.5-Coder",
+      "correctness": 0.875,
+      "relevance": 0.875,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 0.875,
+      "latency": 21.399
+    },
+    {
+      "category": "Dependency Understanding",
+      "model": "deepseek-coder:6.7b",
+      "display": "DeepSeek-Coder",
+      "correctness": 0.5,
+      "relevance": 0.75,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 0.875,
+      "latency": 26.872
+    },
+    {
+      "category": "Explanation",
+      "model": "codellama:latest",
+      "display": "CodeLlama",
+      "correctness": 0.375,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 31.875
+    },
+    {
+      "category": "Explanation",
+      "model": "qwen2.5-coder:7b",
+      "display": "Qwen2.5-Coder",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 27.183
+    },
+    {
+      "category": "Explanation",
+      "model": "deepseek-coder:6.7b",
+      "display": "DeepSeek-Coder",
+      "correctness": 0.125,
+      "relevance": 0.5,
+      "hallucination": 0.25,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 30.516
+    },
+    {
+      "category": "RAG",
+      "model": "codellama:latest",
+      "display": "CodeLlama",
+      "correctness": 0.5,
+      "relevance": 0.625,
+      "hallucination": 0.25,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 23.198
+    },
+    {
+      "category": "RAG",
+      "model": "qwen2.5-coder:7b",
+      "display": "Qwen2.5-Coder",
+      "correctness": 0.875,
+      "relevance": 0.875,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 15.87
+    },
+    {
+      "category": "RAG",
+      "model": "deepseek-coder:6.7b",
+      "display": "DeepSeek-Coder",
+      "correctness": 0.625,
+      "relevance": 0.625,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 16.2
+    },
+    {
+      "category": "Refactoring",
+      "model": "codellama:latest",
+      "display": "CodeLlama",
+      "correctness": 0.625,
+      "relevance": 0.75,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 33.038
+    },
+    {
+      "category": "Refactoring",
+      "model": "qwen2.5-coder:7b",
+      "display": "Qwen2.5-Coder",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 30.925
+    },
+    {
+      "category": "Refactoring",
+      "model": "deepseek-coder:6.7b",
+      "display": "DeepSeek-Coder",
+      "correctness": 0.625,
+      "relevance": 0.75,
+      "hallucination": 0.0,
+      "hit_at_k": 1,
+      "mrr": 1.0,
+      "latency": 25.703
+    }
+  ],
+  "gpu_note": "GPU utilization was not included because a reliable per-model GPU utilization measurement was not available in the evaluation environment.",
+  "resource_method": "During each Ollama generation, a background sampler queried local processes whose name or command line contained 'ollama' approximately every 0.4 seconds using psutil. RSS is process resident set size. CPU percent is the sum of sampled Ollama process CPU percentages and can exceed 100 on multi-core hosts. Token timings come from Ollama's generate API duration fields.",
+  "repository_aggregates": {
+    "codellama:latest": {
+      "n": 12,
+      "mean_file_identification_score": 0.3472,
+      "mean_dependency_reasoning_score": 0.5833,
+      "mean_overall_score": 0.4768
+    },
+    "qwen2.5-coder:7b": {
+      "n": 12,
+      "mean_file_identification_score": 0.6111,
+      "mean_dependency_reasoning_score": 0.775,
+      "mean_overall_score": 0.7398
+    },
+    "deepseek-coder:6.7b": {
+      "n": 12,
+      "mean_file_identification_score": 0.3472,
+      "mean_dependency_reasoning_score": 0.4806,
+      "mean_overall_score": 0.4148
+    }
+  },
+  "score_definitions": {
+    "correctness": "1.0 fully satisfies the dataset rubric, 0.5 partial, 0.0 incorrect. Failed generations are excluded.",
+    "relevance": "1.0 directly answers, 0.5 partial, 0.0 largely irrelevant.",
+    "hallucination": "0 none, 0.5 minor unsupported claim, 1 significant unsupported claim. Wrong selection from retrieved context is not counted as hallucination.",
+    "test_pass_rate": "passed generated-code tests / syntactically valid generated-code tests",
+    "task_logic_correctness": "rubric over required imports, function use, inputs, and expected values, independent of import-path execution. CG02 accepts detect_disaster(query) when a nearby string assignment is a non-disaster query, not only inline string literals.",
+    "codegen_execution": "A generated unittest that reports OK and exit code 0 is a pass even if unittest.main() exited before the harness printed TEST_PASS. This corrects a V3 scoring bug; it does not change the dataset rubric."
+  },
+  "v3_v4_comparison": {
+    "v3_version": "week4_v3_controlled",
+    "v4_version": "week4_v4_improved",
+    "models": {
+      "codellama:latest": {
+        "display": "CodeLlama",
+        "v3": {
+          "correctness": 0.5714,
+          "relevance": 0.6964,
+          "hit_at_k": 0.9643,
+          "mrr": 0.7521,
+          "hallucination": 0.0536,
+          "test_pass_rate": 0.5,
+          "task_logic_correctness": 0.5,
+          "mean_latency": 28.169,
+          "median_latency": 22.523,
+          "p95_latency": 38.918,
+          "throughput": 21.509,
+          "memory_mb": 5501.57,
+          "cpu_percent": 25.91
+        },
+        "v4": {
+          "correctness": 0.5,
+          "relevance": 0.6429,
+          "hit_at_k": 0.9643,
+          "mrr": 0.9226,
+          "hallucination": 0.1071,
+          "test_pass_rate": 0.0,
+          "task_logic_correctness": 0.375,
+          "mean_latency": 26.697,
+          "median_latency": 26.288,
+          "p95_latency": 39.96,
+          "throughput": 22.622,
+          "memory_mb": 5620.89,
+          "cpu_percent": 28.92
+        }
+      },
+      "qwen2.5-coder:7b": {
+        "display": "Qwen2.5-Coder",
+        "v3": {
+          "correctness": 0.625,
+          "relevance": 0.7143,
+          "hit_at_k": 0.9643,
+          "mrr": 0.7521,
+          "hallucination": 0.0,
+          "test_pass_rate": 0.3333,
+          "task_logic_correctness": 0.625,
+          "mean_latency": 23.325,
+          "median_latency": 20.816,
+          "p95_latency": 29.835,
+          "throughput": 22.905,
+          "memory_mb": 4537.84,
+          "cpu_percent": 22.41
+        },
+        "v4": {
+          "correctness": 0.8393,
+          "relevance": 0.8571,
+          "hit_at_k": 0.9643,
+          "mrr": 0.9226,
+          "hallucination": 0.0357,
+          "test_pass_rate": 0.75,
+          "task_logic_correctness": 0.875,
+          "mean_latency": 20.656,
+          "median_latency": 17.594,
+          "p95_latency": 36.774,
+          "throughput": 25.43,
+          "memory_mb": 4585.99,
+          "cpu_percent": 22.18
+        }
+      },
+      "deepseek-coder:6.7b": {
+        "display": "DeepSeek-Coder",
+        "v3": {
+          "correctness": 0.5714,
+          "relevance": 0.6964,
+          "hit_at_k": 0.9643,
+          "mrr": 0.7521,
+          "hallucination": 0.0179,
+          "test_pass_rate": 0.3333,
+          "task_logic_correctness": 0.5,
+          "mean_latency": 27.597,
+          "median_latency": 22.236,
+          "p95_latency": 73.621,
+          "throughput": 20.726,
+          "memory_mb": 5443.63,
+          "cpu_percent": 23.95
+        },
+        "v4": {
+          "correctness": 0.5,
+          "relevance": 0.6607,
+          "hit_at_k": 0.9643,
+          "mrr": 0.9226,
+          "hallucination": 0.0893,
+          "test_pass_rate": 0.25,
+          "task_logic_correctness": 0.625,
+          "mean_latency": 24.322,
+          "median_latency": 24.382,
+          "p95_latency": 31.041,
+          "throughput": 22.888,
+          "memory_mb": 5501.87,
+          "cpu_percent": 27.4
+        }
+      }
+    },
+    "categories": [
+      {
+        "category": "Bug Analysis",
+        "models": {
+          "codellama:latest": {
+            "v3_correctness": 0.875,
+            "v4_correctness": 0.75
+          },
+          "qwen2.5-coder:7b": {
+            "v3_correctness": 0.875,
+            "v4_correctness": 1.0
+          },
+          "deepseek-coder:6.7b": {
+            "v3_correctness": 0.625,
+            "v4_correctness": 0.75
+          }
+        }
+      },
+      {
+        "category": "Code Generation",
+        "models": {
+          "codellama:latest": {
+            "v3_correctness": 0.625,
+            "v4_correctness": 0.375
+          },
+          "qwen2.5-coder:7b": {
+            "v3_correctness": 0.5,
+            "v4_correctness": 0.875
+          },
+          "deepseek-coder:6.7b": {
+            "v3_correctness": 0.5,
+            "v4_correctness": 0.625
+          }
+        }
+      },
+      {
+        "category": "Code Retrieval",
+        "models": {
+          "codellama:latest": {
+            "v3_correctness": 0.25,
+            "v4_correctness": 0.25
+          },
+          "qwen2.5-coder:7b": {
+            "v3_correctness": 0.5,
+            "v4_correctness": 0.75
+          },
+          "deepseek-coder:6.7b": {
+            "v3_correctness": 0.5,
+            "v4_correctness": 0.25
+          }
+        }
+      },
+      {
+        "category": "Dependency Understanding",
+        "models": {
+          "codellama:latest": {
+            "v3_correctness": 0.75,
+            "v4_correctness": 0.625
+          },
+          "qwen2.5-coder:7b": {
+            "v3_correctness": 0.75,
+            "v4_correctness": 0.875
+          },
+          "deepseek-coder:6.7b": {
+            "v3_correctness": 0.625,
+            "v4_correctness": 0.5
+          }
+        }
+      },
+      {
+        "category": "Explanation",
+        "models": {
+          "codellama:latest": {
+            "v3_correctness": 0.375,
+            "v4_correctness": 0.375
+          },
+          "qwen2.5-coder:7b": {
+            "v3_correctness": 0.375,
+            "v4_correctness": 0.5
+          },
+          "deepseek-coder:6.7b": {
+            "v3_correctness": 0.5,
+            "v4_correctness": 0.125
+          }
+        }
+      },
+      {
+        "category": "RAG",
+        "models": {
+          "codellama:latest": {
+            "v3_correctness": 0.5,
+            "v4_correctness": 0.5
+          },
+          "qwen2.5-coder:7b": {
+            "v3_correctness": 0.625,
+            "v4_correctness": 0.875
+          },
+          "deepseek-coder:6.7b": {
+            "v3_correctness": 0.5,
+            "v4_correctness": 0.625
+          }
+        }
+      },
+      {
+        "category": "Refactoring",
+        "models": {
+          "codellama:latest": {
+            "v3_correctness": 0.625,
+            "v4_correctness": 0.625
+          },
+          "qwen2.5-coder:7b": {
+            "v3_correctness": 0.75,
+            "v4_correctness": 1.0
+          },
+          "deepseek-coder:6.7b": {
+            "v3_correctness": 0.75,
+            "v4_correctness": 0.625
+          }
+        }
+      }
+    ],
+    "notes": [
+      "V3 raw results were not modified.",
+      "V4 uses the same 28 questions, ground truth, and scoring scale.",
+      "A documented evaluator bug was fixed: unittest.main() OK/exit 0 is now counted as a code-test pass."
+    ],
+    "v3_recorded_experiments": 84,
+    "v4_recorded_experiments": 84
+  }
+}

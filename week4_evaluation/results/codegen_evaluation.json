@@ -1,0 +1,213 @@
+[
+  {
+    "question_id": "CG01",
+    "extracted_code": "def test_detect_disaster(self):\n    query = \"My house was damaged by a flood. What assistance may be relevant?\"\n    disaster = detect_disaster(query)\n    self.assertEqual(disaster, \"flood\")",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": true,
+    "error_type": null,
+    "error": null,
+    "stdout": "TEST_PASS\n",
+    "stderr": "",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=False",
+      "calls_detect_disaster=True",
+      "flood_query=True",
+      "expects_flood=True"
+    ],
+    "model": "codellama:latest"
+  },
+  {
+    "question_id": "CG01",
+    "extracted_code": "import unittest\nfrom backend.services.retrieval_service import detect_disaster\n\nclass TestDetectDisaster(unittest.TestCase):\n\n    def test_flood_detection(self):\n        query = \"There has been a flood in the area.\"\n        result = detect_disaster(query)\n        self.assertEqual(result, \"flood\")\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "runtime",
+    "error": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+    "stdout": "",
+    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+    "task_logic_correctness": 1.0,
+    "logic_notes": [
+      "imports_detect_disaster=True",
+      "calls_detect_disaster=True",
+      "flood_query=True",
+      "expects_flood=True"
+    ],
+    "model": "qwen2.5-coder:7b"
+  },
+  {
+    "question_id": "CG01",
+    "extracted_code": "import unittest\nfrom your_module import detect_disaster  # replace 'your_module' with the name of the module where detect_disaster() is defined\n\nclass TestDetectDisaster(unittest.TestCase):\n\n    def test_flood(self):\n        query = \"Floods have hit my house\"\n        self.assertEqual(detect_disaster(query), \"flood\")\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "import",
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpfpwjg_yy/CG01.py\", line 8, in <module>\n    from your_module import detect_disaster  # replace 'your_module' with the name of the module where detect_disaster() is defined\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'your_module'\n",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpfpwjg_yy/CG01.py\", line 8, in <module>\n    from your_module import detect_disaster  # replace 'your_module' with the name of the module where detect_disaster() is defined\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'your_module'\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=False",
+      "calls_detect_disaster=True",
+      "flood_query=True",
+      "expects_flood=True"
+    ],
+    "model": "deepseek-coder:6.7b"
+  },
+  {
+    "question_id": "CG02",
+    "extracted_code": "import unittest\n\nclass TestDetectDisaster(unittest.TestCase):\n    def test_detect_disaster(self):\n        query = \"What is the capital of France?\"\n        self.assertIsNone(detect_disaster(query))\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "runtime",
+    "error": "E\n======================================================================\nERROR: test_detect_disaster (__main__.TestDetectDisaster.test_detect_disaster)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp2j8ag6_j/CG02.py\", line 12, in test_detect_disaster\n    self.assertIsNone(detect_disaster(query))\n                      ^^^^^^^^^^^^^^^\nNameError: name 'detect_disaster' is not defined. Did you mean: 'TestDetectDisaster'?\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+    "stdout": "",
+    "stderr": "E\n======================================================================\nERROR: test_detect_disaster (__main__.TestDetectDisaster.test_detect_disaster)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp2j8ag6_j/CG02.py\", line 12, in test_detect_disaster\n    self.assertIsNone(detect_disaster(query))\n                      ^^^^^^^^^^^^^^^\nNameError: name 'detect_disaster' is not defined. Did you mean: 'TestDetectDisaster'?\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=False",
+      "calls_detect_disaster=True",
+      "has_query_call=False",
+      "expects_none=True"
+    ],
+    "model": "codellama:latest"
+  },
+  {
+    "question_id": "CG02",
+    "extracted_code": "import unittest\nfrom backend.services.retrieval_service import detect_disaster\n\nclass TestDetectDisaster(unittest.TestCase):\n\n    def test_no_disaster_keywords(self):\n        query = \"I need help with my car repair.\"\n        result = detect_disaster(query)\n        self.assertIsNone(result)\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "runtime",
+    "error": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+    "stdout": "",
+    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=True",
+      "calls_detect_disaster=True",
+      "has_query_call=False",
+      "expects_none=True"
+    ],
+    "model": "qwen2.5-coder:7b"
+  },
+  {
+    "question_id": "CG02",
+    "extracted_code": "import unittest\nfrom backend.disaster_detection import detect_disaster\n\nclass TestDisasterDetection(unittest.TestCase):\n\n    def test_no_disaster(self):\n        query = \"I need help with my homework.\"\n        self.assertIsNone(detect_disaster(query))\n\nif __name__ == '__main__':\n    unittest.main()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "import",
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp5qvzvdln/CG02.py\", line 8, in <module>\n    from backend.disaster_detection import detect_disaster\nModuleNotFoundError: No module named 'backend.disaster_detection'\n",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp5qvzvdln/CG02.py\", line 8, in <module>\n    from backend.disaster_detection import detect_disaster\nModuleNotFoundError: No module named 'backend.disaster_detection'\n",
+    "task_logic_correctness": 0.5,
+    "logic_notes": [
+      "imports_detect_disaster=False",
+      "calls_detect_disaster=True",
+      "has_query_call=False",
+      "expects_none=True"
+    ],
+    "model": "deepseek-coder:6.7b"
+  },
+  {
+    "question_id": "CG03",
+    "extracted_code": "def validate_query(query: str) -> bool:\n    \"\"\"\n    Validates whether a user query is empty or contains only whitespace.\n\n    Args:\n        query (str): The user query to validate.\n\n    Returns:\n        bool: Whether the query is valid or not.\n    \"\"\"\n    return not query.strip()\n\n# Test cases\nprint(validate_query(\"\"))  # Should be True\nprint(validate_query(\" \"))  # Should be True\nprint(validate_query(\"hello world\"))  # Should be False\nprint(validate_query(\"   \"))  # Should be True\nprint(validate_query(\"\\t\\t\"))  # Should be True\nprint(validate_query(\"\\n\\n\"))  # Should be True\nprint(validate_query(\"\\r\\r\"))  # Should be True\nprint(validate_query(\"\\f\\f\"))  # Should be True\nprint(validate_query(\"\\v\\v\"))  # Should be True\nprint(validate_query(\"\\b\\b\"))  # Should be True\nprint(validate_query(\"\\a\\a\"))  # Should be True\nprint(validate_query(\"\\r\\n\"))  # Should be False\nprint(validate_query(\"\\n\\r\"))  # Should be False\nprint(validate_query(\"\\r\\n\\r\\n\"))  #",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": true,
+    "error_type": null,
+    "error": null,
+    "stdout": "True\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nFalse\nFalse\nTrue\nTrue\nTrue\nTEST_PASS\n",
+    "stderr": "",
+    "task_logic_correctness": 1.0,
+    "logic_notes": [
+      "defines_function=True",
+      "uses_strip=True"
+    ],
+    "model": "codellama:latest"
+  },
+  {
+    "question_id": "CG03",
+    "extracted_code": "def is_query_empty(query: str) -> bool:\n    return not query.strip()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": true,
+    "error_type": null,
+    "error": null,
+    "stdout": "TEST_PASS\n",
+    "stderr": "",
+    "task_logic_correctness": 1.0,
+    "logic_notes": [
+      "defines_function=True",
+      "uses_strip=True"
+    ],
+    "model": "qwen2.5-coder:7b"
+  },
+  {
+    "question_id": "CG03",
+    "extracted_code": "def is_query_empty(query: str) -> bool:\n    return not query.strip()",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": true,
+    "error_type": null,
+    "error": null,
+    "stdout": "TEST_PASS\n",
+    "stderr": "",
+    "task_logic_correctness": 1.0,
+    "logic_notes": [
+      "defines_function=True",
+      "uses_strip=True"
+    ],
+    "model": "deepseek-coder:6.7b"
+  },
+  {
+    "question_id": "CG04",
+    "extracted_code": "import unittest\nfrom backend.services.context_service import build_context",
+    "syntax_valid": true,
+    "executed": true,
+    "passed": false,
+    "error_type": "import",
+    "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp13fdnzpt/CG04.py\", line 8, in <module>\n    from backend.services.context_service import build_context\nModuleNotFoundError: No module named 'backend.services.context_service'\n",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp13fdnzpt/CG04.py\", line 8, in <module>\n    from backend.services.context_service import build_context\nModuleNotFoundError: No module named 'backend.services.context_service'\n",
+    "task_logic_correctness": 0.0,
+    "logic_notes": [
+      "imports_build_context=False",
+      "calls_build_context=False",
+      "metadata_fields=0/5"
+    ],
+    "model": "codellama:latest"
+  },
+  {
+    "question_id": "CG04",
+    "extracted_code": "```python\nimport unittest\nfrom backend.services.orchestration_service import build_context\n\nclass TestBuildContext(unittest.TestCase):\n\n    def test_build_context(self):\n        results = [\n            {\n                \"metadata\": {\n                    \"document\": \"Document1\",\n                    \"authority\": \"Authority1\",\n                    \"disaster\": \"Disaster1\",\n                    \"pages\": \"1-2\"\n                },\n                \"text\": \"Content of Document1\"\n            },\n            {\n                \"metadata\": {\n                    \"document\": \"Document2\",\n                    \"authority\": \"Authority2\",\n                    \"disaster\": \"Disaster2\",\n                    \"pages\": \"3-4\"\n                },\n                \"text\": \"Content of Document2\"\n            }\n        ]\n\n        context = build_context(results)\n\n        expected_context = (\n            \"[SOURCE 1]\\n\"\n            \"Document: Document1\\n\"\n            \"Authority: Authority1\\n\"\n            \"Disaster: Disaster1\\n\"\n            \"Page(s): 1-2\\n\"\n            \"\\nCONTENT:\\n\"\n            \"Content of Document1\\n\"\n            \"[END SOURCE]\\n\\n\"\n            \"[SOURCE 2]\\n\"\n            \"Document: Document2\\n\"\n            \"Authority: Authority2\\n\"\n            \"Disaster: Disaster2\\n\"\n            \"Page(s): 3-4\\n\"\n            \"\\nCONTENT:\\n\"\n            \"Content of Document2\\n\"\n            \"[END SOURCE]\"\n        )\n\n        self.assertEqual(context, expected_context",
+    "syntax_valid": false,
+    "executed": false,
+    "passed": false,
+    "error_type": "syntax",
+    "error": "Extracted code failed ast.parse().",
+    "stdout": "",
+    "stderr": "",
+    "task_logic_correctness": 0.0,
+    "logic_notes": [],
+    "model": "qwen2.5-coder:7b"
+  },
+  {
+    "question_id": "CG04",
+    "extracted_code": "Sure, here is a Python unit test for the `build_context()` function:\n\n```python\nimport unittest\nfrom your_module import build_context  # replace 'your_module' with the name of the module where the build_context function is defined\n\nclass TestBuildContext(unittest.TestCase):\n    def test_build_context(self):\n        # Assuming the build_context function takes a document_chunk as input and returns a context\n        document_chunk = {\n            \"text\": \"This is some document content\",\n            \"metadata\": {\n                \"disaster\": \"Flood\",\n                \"authority\": \"Ministry of Water Management\",\n                \"document\": \"Flood Relief Guidelines\",\n                \"year\": 2022,\n                \"category\": \"Rules and Regulations\",\n                \"source_url\": \"http://www.example.com\",\n                \"pages\": [1, 2, 3],\n                \"chunk\": 0,\n            },\n        }\n        context = build_context(document_chunk)\n\n        # Verify the context contains the document name\n        self.assertIn(\"Flood Relief Guidelines\", context)\n\n        # Verify the context contains the authority\n        self.assertIn(\"Ministry of Water Management\", context",
+    "syntax_valid": false,
+    "executed": false,
+    "passed": false,
+    "error_type": "syntax",
+    "error": "Extracted code failed ast.parse().",
+    "stdout": "",
+    "stderr": "",
+    "task_logic_correctness": 0.0,
+    "logic_notes": [],
+    "model": "deepseek-coder:6.7b"
+  }
+]

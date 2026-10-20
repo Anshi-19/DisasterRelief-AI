@@ -1,0 +1,233 @@
+{
+  "v3_version": "week4_v3_controlled",
+  "v4_version": "week4_v4_improved",
+  "models": {
+    "codellama:latest": {
+      "display": "CodeLlama",
+      "v3": {
+        "correctness": 0.5714,
+        "relevance": 0.6964,
+        "hit_at_k": 0.9643,
+        "mrr": 0.7521,
+        "hallucination": 0.0536,
+        "test_pass_rate": 0.5,
+        "task_logic_correctness": 0.5,
+        "mean_latency": 28.169,
+        "median_latency": 22.523,
+        "p95_latency": 38.918,
+        "throughput": 21.509,
+        "memory_mb": 5501.57,
+        "cpu_percent": 25.91
+      },
+      "v4": {
+        "correctness": 0.5,
+        "relevance": 0.6429,
+        "hit_at_k": 0.9643,
+        "mrr": 0.9226,
+        "hallucination": 0.1071,
+        "test_pass_rate": 0.0,
+        "task_logic_correctness": 0.375,
+        "mean_latency": 26.697,
+        "median_latency": 26.288,
+        "p95_latency": 39.96,
+        "throughput": 22.622,
+        "memory_mb": 5620.89,
+        "cpu_percent": 28.92
+      }
+    },
+    "qwen2.5-coder:7b": {
+      "display": "Qwen2.5-Coder",
+      "v3": {
+        "correctness": 0.625,
+        "relevance": 0.7143,
+        "hit_at_k": 0.9643,
+        "mrr": 0.7521,
+        "hallucination": 0.0,
+        "test_pass_rate": 0.3333,
+        "task_logic_correctness": 0.625,
+        "mean_latency": 23.325,
+        "median_latency": 20.816,
+        "p95_latency": 29.835,
+        "throughput": 22.905,
+        "memory_mb": 4537.84,
+        "cpu_percent": 22.41
+      },
+      "v4": {
+        "correctness": 0.8393,
+        "relevance": 0.8571,
+        "hit_at_k": 0.9643,
+        "mrr": 0.9226,
+        "hallucination": 0.0357,
+        "test_pass_rate": 0.75,
+        "task_logic_correctness": 0.875,
+        "mean_latency": 20.656,
+        "median_latency": 17.594,
+        "p95_latency": 36.774,
+        "throughput": 25.43,
+        "memory_mb": 4585.99,
+        "cpu_percent": 22.18
+      }
+    },
+    "deepseek-coder:6.7b": {
+      "display": "DeepSeek-Coder",
+      "v3": {
+        "correctness": 0.5714,
+        "relevance": 0.6964,
+        "hit_at_k": 0.9643,
+        "mrr": 0.7521,
+        "hallucination": 0.0179,
+        "test_pass_rate": 0.3333,
+        "task_logic_correctness": 0.5,
+        "mean_latency": 27.597,
+        "median_latency": 22.236,
+        "p95_latency": 73.621,
+        "throughput": 20.726,
+        "memory_mb": 5443.63,
+        "cpu_percent": 23.95
+      },
+      "v4": {
+        "correctness": 0.5,
+        "relevance": 0.6607,
+        "hit_at_k": 0.9643,
+        "mrr": 0.9226,
+        "hallucination": 0.0893,
+        "test_pass_rate": 0.25,
+        "task_logic_correctness": 0.625,
+        "mean_latency": 24.322,
+        "median_latency": 24.382,
+        "p95_latency": 31.041,
+        "throughput": 22.888,
+        "memory_mb": 5501.87,
+        "cpu_percent": 27.4
+      }
+    }
+  },
+  "categories": [
+    {
+      "category": "Bug Analysis",
+      "models": {
+        "codellama:latest": {
+          "v3_correctness": 0.875,
+          "v4_correctness": 0.75
+        },
+        "qwen2.5-coder:7b": {
+          "v3_correctness": 0.875,
+          "v4_correctness": 1.0
+        },
+        "deepseek-coder:6.7b": {
+          "v3_correctness": 0.625,
+          "v4_correctness": 0.75
+        }
+      }
+    },
+    {
+      "category": "Code Generation",
+      "models": {
+        "codellama:latest": {
+          "v3_correctness": 0.625,
+          "v4_correctness": 0.375
+        },
+        "qwen2.5-coder:7b": {
+          "v3_correctness": 0.5,
+          "v4_correctness": 0.875
+        },
+        "deepseek-coder:6.7b": {
+          "v3_correctness": 0.5,
+          "v4_correctness": 0.625
+        }
+      }
+    },
+    {
+      "category": "Code Retrieval",
+      "models": {
+        "codellama:latest": {
+          "v3_correctness": 0.25,
+          "v4_correctness": 0.25
+        },
+        "qwen2.5-coder:7b": {
+          "v3_correctness": 0.5,
+          "v4_correctness": 0.75
+        },
+        "deepseek-coder:6.7b": {
+          "v3_correctness": 0.5,
+          "v4_correctness": 0.25
+        }
+      }
+    },
+    {
+      "category": "Dependency Understanding",
+      "models": {
+        "codellama:latest": {
+          "v3_correctness": 0.75,
+          "v4_correctness": 0.625
+        },
+        "qwen2.5-coder:7b": {
+          "v3_correctness": 0.75,
+          "v4_correctness": 0.875
+        },
+        "deepseek-coder:6.7b": {
+          "v3_correctness": 0.625,
+          "v4_correctness": 0.5
+        }
+      }
+    },
+    {
+      "category": "Explanation",
+      "models": {
+        "codellama:latest": {
+          "v3_correctness": 0.375,
+          "v4_correctness": 0.375
+        },
+        "qwen2.5-coder:7b": {
+          "v3_correctness": 0.375,
+          "v4_correctness": 0.5
+        },
+        "deepseek-coder:6.7b": {
+          "v3_correctness": 0.5,
+          "v4_correctness": 0.125
+        }
+      }
+    },
+    {
+      "category": "RAG",
+      "models": {
+        "codellama:latest": {
+          "v3_correctness": 0.5,
+          "v4_correctness": 0.5
+        },
+        "qwen2.5-coder:7b": {
+          "v3_correctness": 0.625,
+          "v4_correctness": 0.875
+        },
+        "deepseek-coder:6.7b": {
+          "v3_correctness": 0.5,
+          "v4_correctness": 0.625
+        }
+      }
+    },
+    {
+      "category": "Refactoring",
+      "models": {
+        "codellama:latest": {
+          "v3_correctness": 0.625,
+          "v4_correctness": 0.625
+        },
+        "qwen2.5-coder:7b": {
+          "v3_correctness": 0.75,
+          "v4_correctness": 1.0
+        },
+        "deepseek-coder:6.7b": {
+          "v3_correctness": 0.75,
+          "v4_correctness": 0.625
+        }
+      }
+    }
+  ],
+  "notes": [
+    "V3 raw results were not modified.",
+    "V4 uses the same 28 questions, ground truth, and scoring scale.",
+    "A documented evaluator bug was fixed: unittest.main() OK/exit 0 is now counted as a code-test pass."
+  ],
+  "v3_recorded_experiments": 84,
+  "v4_recorded_experiments": 84
+}

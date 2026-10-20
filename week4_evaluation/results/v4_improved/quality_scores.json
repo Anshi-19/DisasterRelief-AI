@@ -1,0 +1,2208 @@
+{
+  "per_question": [
+    {
+      "model": "codellama:latest",
+      "question_id": "E01",
+      "category": "Explanation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 6/8 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "E01",
+      "category": "Explanation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 4/8 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "E01",
+      "category": "Explanation",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 1.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/8 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "unsupported stack claims: ['openai']",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "E02",
+      "category": "Explanation",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/6 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "E02",
+      "category": "Explanation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/6 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "E02",
+      "category": "Explanation",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/6 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "E03",
+      "category": "Explanation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/5 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "E03",
+      "category": "Explanation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/5 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "E03",
+      "category": "Explanation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 4/5 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "E04",
+      "category": "Explanation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/3 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "E04",
+      "category": "Explanation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/3 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "E04",
+      "category": "Explanation",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/3 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CR01",
+      "category": "Code Retrieval",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.5,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/1 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "mentioned files not in expected/known set: ['backend/services/chat_service.py']",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CR01",
+      "category": "Code Retrieval",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.5,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/1 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "mentioned files not in expected/known set: ['backend/app.py']",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CR01",
+      "category": "Code Retrieval",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.5,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/1 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "mentioned files not in expected/known set: ['backend/services/chat_service.py']",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CR02",
+      "category": "Code Retrieval",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/1 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CR02",
+      "category": "Code Retrieval",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/1 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CR02",
+      "category": "Code Retrieval",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/1 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CR03",
+      "category": "Code Retrieval",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/1 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CR03",
+      "category": "Code Retrieval",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/1 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CR03",
+      "category": "Code Retrieval",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/1 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CR04",
+      "category": "Code Retrieval",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/1 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CR04",
+      "category": "Code Retrieval",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.5,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/1 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "mentioned files not in expected/known set: ['response.js']",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CR04",
+      "category": "Code Retrieval",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/1 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "D01",
+      "category": "Dependency Understanding",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.5,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/6 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "mentioned files not in expected/known set: ['frontend/src/week4Benchmark.js']",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "D01",
+      "category": "Dependency Understanding",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 6/6 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "D01",
+      "category": "Dependency Understanding",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/6 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "D02",
+      "category": "Dependency Understanding",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "D02",
+      "category": "Dependency Understanding",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "D02",
+      "category": "Dependency Understanding",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "D03",
+      "category": "Dependency Understanding",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "D03",
+      "category": "Dependency Understanding",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "D03",
+      "category": "Dependency Understanding",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "D04",
+      "category": "Dependency Understanding",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/3 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "D04",
+      "category": "Dependency Understanding",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/3 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "D04",
+      "category": "Dependency Understanding",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/3 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "B01",
+      "category": "Bug Analysis",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/3 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "B01",
+      "category": "Bug Analysis",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "B01",
+      "category": "Bug Analysis",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/3 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "B02",
+      "category": "Bug Analysis",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/2 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "B02",
+      "category": "Bug Analysis",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/2 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "B02",
+      "category": "Bug Analysis",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/2 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "B03",
+      "category": "Bug Analysis",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "B03",
+      "category": "Bug Analysis",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "B03",
+      "category": "Bug Analysis",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 3/3 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "B04",
+      "category": "Bug Analysis",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/2 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "B04",
+      "category": "Bug Analysis",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/2 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "B04",
+      "category": "Bug Analysis",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/2 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CG01",
+      "category": "Code Generation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.5,
+      "correctness_method": "rubric+measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "partial task logic; execution error=import",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "mentioned files not in expected/known set: ['test_detect_disaster.py']",
+      "success": true,
+      "codegen": {
+        "question_id": "CG01",
+        "extracted_code": "import unittest\nfrom backend.services.orchestration_service import detect_disaster\n\nclass TestDetectDisaster(unittest.TestCase):\n    def test_flood(self):\n        query = \"The city is flooded due to heavy rainfall.\"\n        self.assertEqual(detect_disaster(query), \"flood\")\n\nif __name__ == \"__main__\":\n    unittest.main()",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": false,
+        "error_type": "import",
+        "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpm4d1xrdv/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'detect_disaster' from 'backend.services.orchestration_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/orchestration_service.py)\n",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpm4d1xrdv/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'detect_disaster' from 'backend.services.orchestration_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/orchestration_service.py)\n",
+        "task_logic_correctness": 0.5,
+        "logic_notes": [
+          "imports_detect_disaster=False",
+          "calls_detect_disaster=True",
+          "flood_query=True",
+          "expects_flood=True"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CG01",
+      "category": "Code Generation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric+measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "partial task logic; execution error=import",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": {
+        "question_id": "CG01",
+        "extracted_code": "import unittest\nfrom your_module import detect_disaster\n\nclass TestDetectDisaster(unittest.TestCase):\n    def test_flood_detection(self):\n        query = \"My house was damaged by a flood. What assistance may be relevant?\"\n        result = detect_disaster(query)\n        self.assertEqual(result, \"flood\")\n\nif __name__ == '__main__':\n    unittest.main()",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": false,
+        "error_type": "import",
+        "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpgo_f2lg4/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nModuleNotFoundError: No module named 'your_module'\n",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpgo_f2lg4/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nModuleNotFoundError: No module named 'your_module'\n",
+        "task_logic_correctness": 0.5,
+        "logic_notes": [
+          "imports_detect_disaster=False",
+          "calls_detect_disaster=True",
+          "flood_query=True",
+          "expects_flood=True"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CG01",
+      "category": "Code Generation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.5,
+      "correctness_method": "rubric+measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "partial task logic; execution error=import",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "mentioned files not in expected/known set: ['test_detect_disaster.py']",
+      "success": true,
+      "codegen": {
+        "question_id": "CG01",
+        "extracted_code": "import unittest\nfrom backend.services.orchestration_service import detect_disaster\n\nclass TestDetectDisaster(unittest.TestCase):\n\n    def test_flood_detection(self):\n        query = \"I'm worried about a flood in my area.\"\n        self.assertEqual(detect_disaster(query), \"flood\")\n\nif __name__ == '__main__':\n    unittest.main()",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": false,
+        "error_type": "import",
+        "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp480x47g9/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'detect_disaster' from 'backend.services.orchestration_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/orchestration_service.py)\n",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmp480x47g9/CG01.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'detect_disaster' from 'backend.services.orchestration_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/orchestration_service.py)\n",
+        "task_logic_correctness": 0.5,
+        "logic_notes": [
+          "imports_detect_disaster=False",
+          "calls_detect_disaster=True",
+          "flood_query=True",
+          "expects_flood=True"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CG02",
+      "category": "Code Generation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.5,
+      "correctness_method": "rubric+measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "partial task logic; execution error=runtime",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "mentioned files not in expected/known set: ['test_detect_disaster.py']",
+      "success": true,
+      "codegen": {
+        "question_id": "CG02",
+        "extracted_code": "import unittest\n\nclass TestDetectDisaster(unittest.TestCase):\n    def test_no_disaster(self):\n        query = \"What is the capital of France?\"\n        self.assertIsNone(detect_disaster(query))\n\nif __name__ == '__main__':\n    unittest.main()",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": false,
+        "error_type": "runtime",
+        "error": "test_no_disaster (generated_submission.TestDetectDisaster.test_no_disaster) ... ERROR\n\n======================================================================\nERROR: test_no_disaster (generated_submission.TestDetectDisaster.test_no_disaster)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<generated>\", line 6, in test_no_disaster\nNameError: name 'detect_disaster' is not defined. Did you mean: 'TestDetectDisaster'?\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+        "stdout": "",
+        "stderr": "test_no_disaster (generated_submission.TestDetectDisaster.test_no_disaster) ... ERROR\n\n======================================================================\nERROR: test_no_disaster (generated_submission.TestDetectDisaster.test_no_disaster)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<generated>\", line 6, in test_no_disaster\nNameError: name 'detect_disaster' is not defined. Did you mean: 'TestDetectDisaster'?\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+        "task_logic_correctness": 0.5,
+        "logic_notes": [
+          "imports_detect_disaster=False",
+          "calls_detect_disaster=True",
+          "has_query_call=True",
+          "expects_none=True"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CG02",
+      "category": "Code Generation",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "generated code executed successfully against the real repository",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": {
+        "question_id": "CG02",
+        "extracted_code": "from backend.services.retrieval_service import detect_disaster\n\ndef test_detect_disaster_no_keywords():\n    query = \"What is the weather like today?\"\n    result = detect_disaster(query)\n    assert result is None",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": true,
+        "error_type": null,
+        "error": null,
+        "stdout": "TEST_PASS\n",
+        "stderr": "",
+        "task_logic_correctness": 1.0,
+        "logic_notes": [
+          "imports_detect_disaster=True",
+          "calls_detect_disaster=True",
+          "has_query_call=True",
+          "expects_none=True"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CG02",
+      "category": "Code Generation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.5,
+      "correctness_method": "rubric+measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "partial task logic; execution error=import",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "mentioned files not in expected/known set: ['test_detect_disaster.py']",
+      "success": true,
+      "codegen": {
+        "question_id": "CG02",
+        "extracted_code": "import unittest\nfrom your_module import detect_disaster  # replace 'your_module' with the name of the module where detect_disaster is defined\n\nclass TestDetectDisaster(unittest.TestCase):\n    def test_no_disaster(self):\n        query = \"This query does not contain flood, earthquake, or cyclone\"\n        self.assertIsNone(detect_disaster(query))\n\nif __name__ == '__main__':\n    unittest.main()",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": false,
+        "error_type": "import",
+        "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpw787xdvl/CG02.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nModuleNotFoundError: No module named 'your_module'\n",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpw787xdvl/CG02.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nModuleNotFoundError: No module named 'your_module'\n",
+        "task_logic_correctness": 0.5,
+        "logic_notes": [
+          "imports_detect_disaster=False",
+          "calls_detect_disaster=True",
+          "has_query_call=True",
+          "expects_none=True"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CG03",
+      "category": "Code Generation",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric+measured",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "syntactically valid but did not satisfy the task rubric",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": {
+        "question_id": "CG03",
+        "extracted_code": "query = \"   \"\nprint(is_empty_query(query))  # Output: True\n\nquery = \"Hello, world!\"\nprint(is_empty_query(query))  # Output: False",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": false,
+        "error_type": "runtime",
+        "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpte1__g5g/CG03.py\", line 7, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nNameError: name 'is_empty_query' is not defined\n",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpte1__g5g/CG03.py\", line 7, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nNameError: name 'is_empty_query' is not defined\n",
+        "task_logic_correctness": 0.0,
+        "logic_notes": [
+          "defines_function=False",
+          "uses_strip=False"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CG03",
+      "category": "Code Generation",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "generated code executed successfully against the real repository",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": {
+        "question_id": "CG03",
+        "extracted_code": "def is_query_empty_or_whitespace(query: str) -> bool:\n    \"\"\"\n    Validates whether the provided query is empty or contains only whitespace.\n\n    Args:\n        query (str): The user query to validate.\n\n    Returns:\n        bool: True if the query is empty or contains only whitespace, False otherwise.\n    \"\"\"\n    return not (query or \"\").strip()",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": true,
+        "error_type": null,
+        "error": null,
+        "stdout": "TEST_PASS\n",
+        "stderr": "",
+        "task_logic_correctness": 1.0,
+        "logic_notes": [
+          "defines_function=True",
+          "uses_strip=True"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CG03",
+      "category": "Code Generation",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "generated code executed successfully against the real repository",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": {
+        "question_id": "CG03",
+        "extracted_code": "def is_query_empty(query):\n    if query.strip() == \"\":\n        return True\n    else:\n        return False",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": true,
+        "error_type": null,
+        "error": null,
+        "stdout": "TEST_PASS\n",
+        "stderr": "",
+        "task_logic_correctness": 1.0,
+        "logic_notes": [
+          "defines_function=True",
+          "uses_strip=True"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "CG04",
+      "category": "Code Generation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric+measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "partial task logic; execution error=runtime",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": {
+        "question_id": "CG04",
+        "extracted_code": "def test_build_context(self):\n    question = \"What is the capital of France?\"\n    context = \"The capital of France is Paris. It is located in the Île-de-France region.\"\n    generated_context = build_context(question, context)\n    self.assertIn(\"Paris\", generated_context)\n    self.assertIn(\"France\", generated_context)\n    self.assertIn(\"Île-de-France\", generated_context)\n    self.assertIn(\"region\", generated_context)\n    self.assertIn(\"content\", generated_context)",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": false,
+        "error_type": "runtime",
+        "error": "NO_EXECUTABLE_TEST\n",
+        "stdout": "",
+        "stderr": "NO_EXECUTABLE_TEST\n",
+        "task_logic_correctness": 0.5,
+        "logic_notes": [
+          "imports_build_context=False",
+          "calls_build_context=True",
+          "metadata_fields=1/5"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "CG04",
+      "category": "Code Generation",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "generated code executed successfully against the real repository",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": {
+        "question_id": "CG04",
+        "extracted_code": "from backend.services.orchestration_service import build_context\n\ndef test_build_context():\n    results = [\n        {\n            \"metadata\": {\n                \"document\": \"Document1\",\n                \"authority\": \"Authority1\",\n                \"disaster\": \"earthquake\",\n                \"pages\": [1, 2]\n            },\n            \"text\": \"Content of Document1\"\n        },\n        {\n            \"metadata\": {\n                \"document\": \"Document2\",\n                \"authority\": \"Authority2\",\n                \"disaster\": \"flood\",\n                \"pages\": [3, 4]\n            },\n            \"text\": \"Content of Document2\"\n        }\n    ]\n    context = build_context(results)\n    assert \"Document1\" in context\n    assert \"Authority1\" in context\n    assert \"earthquake\" in context\n    assert \"Document2\" in context\n    assert \"Authority2\" in context\n    assert \"flood\" in context\n    assert \"Page(s): [1, 2]\" in context\n    assert \"Page(s): [3, 4]\" in context\n    assert \"Content of Document1\" in context\n    assert \"Content of Document2\" in context",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": true,
+        "error_type": null,
+        "error": null,
+        "stdout": "TEST_PASS\n",
+        "stderr": "",
+        "task_logic_correctness": 1.0,
+        "logic_notes": [
+          "imports_build_context=True",
+          "calls_build_context=True",
+          "metadata_fields=4/5"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "CG04",
+      "category": "Code Generation",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric+measured",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "partial task logic; execution error=import",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": {
+        "question_id": "CG04",
+        "extracted_code": "import unittest\nfrom backend.services.llm_service import build_context\n\nclass TestBuildContext(unittest.TestCase):\n    def test_build_context(self):\n        # Assuming a document object with the following structure\n        document = {\n            'name': 'Test Document',\n            'authority': 'Test Authority',\n            'disaster_type': 'Test Disaster',\n            'page_info': 'Test Page Info',\n            'content': 'Test Content'\n        }\n\n        # Call the function with the document object\n        context = build_context(document)\n\n        # Check if the context contains the document name, authority, disaster type, page information, and content\n        self.assertIn(document['name'], context)\n        self.assertIn(document['authority'], context)\n        self.assertIn(document['disaster_type'], context)\n        self.assertIn(document['page_info'], context)\n        self.assertIn(document['content'], context)\n\nif __name__ == '__main__':\n    unittest.main()",
+        "syntax_valid": true,
+        "executed": true,
+        "passed": false,
+        "error_type": "import",
+        "error": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpb_eyqs7c/CG04.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'build_context' from 'backend.services.llm_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/llm_service.py)\n",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/var/folders/st/4ggw_7q553gc6kxqbpndm5280000gn/T/tmpb_eyqs7c/CG04.py\", line 16, in <module>\n    exec(compile(_generated, \"<generated>\", \"exec\"), _namespace)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<generated>\", line 2, in <module>\nImportError: cannot import name 'build_context' from 'backend.services.llm_service' (/Users/anshitiwari/DisasterRelief-AI/backend/services/llm_service.py)\n",
+        "task_logic_correctness": 0.5,
+        "logic_notes": [
+          "imports_build_context=False",
+          "calls_build_context=True",
+          "metadata_fields=4/5"
+        ]
+      },
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RF01",
+      "category": "Refactoring",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 4/4 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RF01",
+      "category": "Refactoring",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 4/4 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RF01",
+      "category": "Refactoring",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 4/4 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RF02",
+      "category": "Refactoring",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/5 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RF02",
+      "category": "Refactoring",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 5/5 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RF02",
+      "category": "Refactoring",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/5 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RF03",
+      "category": "Refactoring",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/2 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RF03",
+      "category": "Refactoring",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/2 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RF03",
+      "category": "Refactoring",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/2 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RF04",
+      "category": "Refactoring",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/2 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RF04",
+      "category": "Refactoring",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/2 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RF04",
+      "category": "Refactoring",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 2/2 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": true,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RG01",
+      "category": "RAG",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 4/7 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RG01",
+      "category": "RAG",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 7/7 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RG01",
+      "category": "RAG",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 7/7 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RG02",
+      "category": "RAG",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 7/7 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RG02",
+      "category": "RAG",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 7/7 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RG02",
+      "category": "RAG",
+      "correctness": 0.0,
+      "relevance": 0.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/7 required evidence groups",
+      "relevance_rationale": "largely irrelevant to the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RG03",
+      "category": "RAG",
+      "correctness": 0.0,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "heuristic",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 0/1 required evidence groups",
+      "relevance_rationale": "shares question terminology but fails correctness",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RG03",
+      "category": "RAG",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/1 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RG03",
+      "category": "RAG",
+      "correctness": 1.0,
+      "relevance": 1.0,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/1 required evidence groups",
+      "relevance_rationale": "answer satisfies correctness criteria for this question",
+      "hallucination_rationale": "no unsupported factual claims detected",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "codellama:latest",
+      "question_id": "RG04",
+      "category": "RAG",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 1.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/2 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "unsupported monetary amount",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "question_id": "RG04",
+      "category": "RAG",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/2 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    },
+    {
+      "model": "deepseek-coder:6.7b",
+      "question_id": "RG04",
+      "category": "RAG",
+      "correctness": 0.5,
+      "relevance": 0.5,
+      "hallucination": 0.0,
+      "correctness_method": "rubric",
+      "relevance_method": "rubric",
+      "hallucination_method": "rubric",
+      "correctness_rationale": "matched 1/2 required evidence groups",
+      "relevance_rationale": "partially addresses the asked task",
+      "hallucination_rationale": "no unsupported claims; residual error treated as context-use/answer-selection",
+      "success": true,
+      "codegen": null,
+      "human_review": {
+        "required": false,
+        "status": "optional_override_not_applied",
+        "note": "Automatic rubric scores are used. A reviewer may override individual items using results/human_review_template.csv without changing raw model answers."
+      }
+    }
+  ],
+  "aggregates": {
+    "score_definitions": {
+      "correctness": "1.0 fully satisfies the dataset rubric, 0.5 partial, 0.0 incorrect. Failed generations are excluded.",
+      "relevance": "1.0 directly answers, 0.5 partial, 0.0 largely irrelevant.",
+      "hallucination": "0 none, 0.5 minor unsupported claim, 1 significant unsupported claim. Wrong selection from retrieved context is not counted as hallucination.",
+      "test_pass_rate": "passed generated-code tests / syntactically valid generated-code tests",
+      "task_logic_correctness": "rubric over required imports, function use, inputs, and expected values, independent of import-path execution. CG02 accepts detect_disaster(query) when a nearby string assignment is a non-disaster query, not only inline string literals.",
+      "codegen_execution": "A generated unittest that reports OK and exit code 0 is a pass even if unittest.main() exited before the harness printed TEST_PASS. This corrects a V3 scoring bug; it does not change the dataset rubric."
+    },
+    "models": {
+      "codellama:latest": {
+        "n": 28,
+        "correctness": 0.5,
+        "relevance": 0.6429,
+        "hallucination": 0.1071,
+        "hallucination_rate_significant": 0.0357,
+        "hallucination_rate_any": 0.1786
+      },
+      "qwen2.5-coder:7b": {
+        "n": 28,
+        "correctness": 0.8393,
+        "relevance": 0.8571,
+        "hallucination": 0.0357,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0.0714
+      },
+      "deepseek-coder:6.7b": {
+        "n": 28,
+        "correctness": 0.5,
+        "relevance": 0.6607,
+        "hallucination": 0.0893,
+        "hallucination_rate_significant": 0.0357,
+        "hallucination_rate_any": 0.1429
+      }
+    },
+    "by_category": {
+      "codellama:latest::Explanation": {
+        "n": 4,
+        "correctness": 0.375,
+        "relevance": 0.5,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "qwen2.5-coder:7b::Explanation": {
+        "n": 4,
+        "correctness": 0.5,
+        "relevance": 0.5,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "deepseek-coder:6.7b::Explanation": {
+        "n": 4,
+        "correctness": 0.125,
+        "relevance": 0.5,
+        "hallucination": 0.25,
+        "hallucination_rate_significant": 0.25,
+        "hallucination_rate_any": 0.25
+      },
+      "codellama:latest::Code Retrieval": {
+        "n": 4,
+        "correctness": 0.25,
+        "relevance": 0.625,
+        "hallucination": 0.125,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0.25
+      },
+      "qwen2.5-coder:7b::Code Retrieval": {
+        "n": 4,
+        "correctness": 0.75,
+        "relevance": 0.875,
+        "hallucination": 0.25,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0.5
+      },
+      "deepseek-coder:6.7b::Code Retrieval": {
+        "n": 4,
+        "correctness": 0.25,
+        "relevance": 0.625,
+        "hallucination": 0.125,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0.25
+      },
+      "codellama:latest::Dependency Understanding": {
+        "n": 4,
+        "correctness": 0.625,
+        "relevance": 0.75,
+        "hallucination": 0.125,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0.25
+      },
+      "qwen2.5-coder:7b::Dependency Understanding": {
+        "n": 4,
+        "correctness": 0.875,
+        "relevance": 0.875,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "deepseek-coder:6.7b::Dependency Understanding": {
+        "n": 4,
+        "correctness": 0.5,
+        "relevance": 0.75,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "codellama:latest::Bug Analysis": {
+        "n": 4,
+        "correctness": 0.75,
+        "relevance": 0.75,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "qwen2.5-coder:7b::Bug Analysis": {
+        "n": 4,
+        "correctness": 1.0,
+        "relevance": 1.0,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "deepseek-coder:6.7b::Bug Analysis": {
+        "n": 4,
+        "correctness": 0.75,
+        "relevance": 0.75,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "codellama:latest::Code Generation": {
+        "n": 4,
+        "correctness": 0.375,
+        "relevance": 0.5,
+        "hallucination": 0.25,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0.5
+      },
+      "qwen2.5-coder:7b::Code Generation": {
+        "n": 4,
+        "correctness": 0.875,
+        "relevance": 0.875,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "deepseek-coder:6.7b::Code Generation": {
+        "n": 4,
+        "correctness": 0.625,
+        "relevance": 0.625,
+        "hallucination": 0.25,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0.5
+      },
+      "codellama:latest::Refactoring": {
+        "n": 4,
+        "correctness": 0.625,
+        "relevance": 0.75,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "qwen2.5-coder:7b::Refactoring": {
+        "n": 4,
+        "correctness": 1.0,
+        "relevance": 1.0,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "deepseek-coder:6.7b::Refactoring": {
+        "n": 4,
+        "correctness": 0.625,
+        "relevance": 0.75,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "codellama:latest::RAG": {
+        "n": 4,
+        "correctness": 0.5,
+        "relevance": 0.625,
+        "hallucination": 0.25,
+        "hallucination_rate_significant": 0.25,
+        "hallucination_rate_any": 0.25
+      },
+      "qwen2.5-coder:7b::RAG": {
+        "n": 4,
+        "correctness": 0.875,
+        "relevance": 0.875,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      },
+      "deepseek-coder:6.7b::RAG": {
+        "n": 4,
+        "correctness": 0.625,
+        "relevance": 0.625,
+        "hallucination": 0.0,
+        "hallucination_rate_significant": 0,
+        "hallucination_rate_any": 0
+      }
+    },
+    "code_generation": {
+      "codellama:latest": {
+        "n": 4,
+        "syntax_valid": 4,
+        "executed": 4,
+        "passed": 0,
+        "test_pass_rate": 0.0,
+        "functional_pass_rate": 0.0,
+        "mean_task_logic_correctness": 0.375,
+        "error_types": {
+          "import": 1,
+          "runtime": 3
+        }
+      },
+      "qwen2.5-coder:7b": {
+        "n": 4,
+        "syntax_valid": 4,
+        "executed": 4,
+        "passed": 3,
+        "test_pass_rate": 0.75,
+        "functional_pass_rate": 0.75,
+        "mean_task_logic_correctness": 0.875,
+        "error_types": {
+          "import": 1
+        }
+      },
+      "deepseek-coder:6.7b": {
+        "n": 4,
+        "syntax_valid": 4,
+        "executed": 4,
+        "passed": 1,
+        "test_pass_rate": 0.25,
+        "functional_pass_rate": 0.25,
+        "mean_task_logic_correctness": 0.625,
+        "error_types": {
+          "import": 3
+        }
+      }
+    }
+  }
+}

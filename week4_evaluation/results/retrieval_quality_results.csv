@@ -1,0 +1,85 @@
+question_id,model,category,retrieval_source,retrieved_count,relevant_count,first_relevant_rank,hit_at_8,reciprocal_rank,precision_at_8,retrieval_latency_seconds,status
+E01,codellama:latest,Explanation,disaster_knowledge_base,8,0,,0,0,0.0,0.109,SUCCESS
+E01,qwen2.5-coder:7b,Explanation,disaster_knowledge_base,8,0,,0,0,0.0,0.109,SUCCESS
+E01,deepseek-coder:6.7b,Explanation,disaster_knowledge_base,8,0,,0,0,0.0,0.109,SUCCESS
+E02,codellama:latest,Explanation,disaster_knowledge_base,8,0,,0,0,0.0,0.583,SUCCESS
+E02,qwen2.5-coder:7b,Explanation,disaster_knowledge_base,8,0,,0,0,0.0,0.583,SUCCESS
+E02,deepseek-coder:6.7b,Explanation,disaster_knowledge_base,8,0,,0,0,0.0,0.583,SUCCESS
+E03,codellama:latest,Explanation,disaster_knowledge_base,1,0,,0,0,0.0,0.568,SUCCESS
+E03,qwen2.5-coder:7b,Explanation,disaster_knowledge_base,1,0,,0,0,0.0,0.568,SUCCESS
+E03,deepseek-coder:6.7b,Explanation,disaster_knowledge_base,1,0,,0,0,0.0,0.568,SUCCESS
+E04,codellama:latest,Explanation,disaster_knowledge_base,8,0,,0,0,0.0,0.299,SUCCESS
+E04,qwen2.5-coder:7b,Explanation,disaster_knowledge_base,8,0,,0,0,0.0,0.299,SUCCESS
+E04,deepseek-coder:6.7b,Explanation,disaster_knowledge_base,8,0,,0,0,0.0,0.299,SUCCESS
+CR01,codellama:latest,Code Retrieval,repository,8,2,1,1,1.0,0.25,0.306,SUCCESS
+CR01,qwen2.5-coder:7b,Code Retrieval,repository,8,2,1,1,1.0,0.25,0.306,SUCCESS
+CR01,deepseek-coder:6.7b,Code Retrieval,repository,8,2,1,1,1.0,0.25,0.306,SUCCESS
+CR02,codellama:latest,Code Retrieval,repository,8,1,3,1,0.3333333333333333,0.125,0.293,SUCCESS
+CR02,qwen2.5-coder:7b,Code Retrieval,repository,8,1,3,1,0.3333333333333333,0.125,0.293,SUCCESS
+CR02,deepseek-coder:6.7b,Code Retrieval,repository,8,1,3,1,0.3333333333333333,0.125,0.293,SUCCESS
+CR03,codellama:latest,Code Retrieval,repository,8,1,1,1,1.0,0.125,0.291,SUCCESS
+CR03,qwen2.5-coder:7b,Code Retrieval,repository,8,1,1,1,1.0,0.125,0.291,SUCCESS
+CR03,deepseek-coder:6.7b,Code Retrieval,repository,8,1,1,1,1.0,0.125,0.291,SUCCESS
+CR04,codellama:latest,Code Retrieval,repository,8,1,2,1,0.5,0.125,0.29,SUCCESS
+CR04,qwen2.5-coder:7b,Code Retrieval,repository,8,1,2,1,0.5,0.125,0.29,SUCCESS
+CR04,deepseek-coder:6.7b,Code Retrieval,repository,8,1,2,1,0.5,0.125,0.29,SUCCESS
+D01,codellama:latest,Dependency Understanding,repository,8,3,1,1,1.0,0.375,0.291,SUCCESS
+D01,qwen2.5-coder:7b,Dependency Understanding,repository,8,3,1,1,1.0,0.375,0.291,SUCCESS
+D01,deepseek-coder:6.7b,Dependency Understanding,repository,8,3,1,1,1.0,0.375,0.291,SUCCESS
+D02,codellama:latest,Dependency Understanding,repository,8,3,2,1,0.5,0.375,0.288,SUCCESS
+D02,qwen2.5-coder:7b,Dependency Understanding,repository,8,3,2,1,0.5,0.375,0.288,SUCCESS
+D02,deepseek-coder:6.7b,Dependency Understanding,repository,8,3,2,1,0.5,0.375,0.288,SUCCESS
+D03,codellama:latest,Dependency Understanding,repository,8,4,1,1,1.0,0.5,0.288,SUCCESS
+D03,qwen2.5-coder:7b,Dependency Understanding,repository,8,4,1,1,1.0,0.5,0.288,SUCCESS
+D03,deepseek-coder:6.7b,Dependency Understanding,repository,8,4,1,1,1.0,0.5,0.288,SUCCESS
+D04,codellama:latest,Dependency Understanding,repository,8,1,2,1,0.5,0.125,0.297,SUCCESS
+D04,qwen2.5-coder:7b,Dependency Understanding,repository,8,1,2,1,0.5,0.125,0.297,SUCCESS
+D04,deepseek-coder:6.7b,Dependency Understanding,repository,8,1,2,1,0.5,0.125,0.297,SUCCESS
+B01,codellama:latest,Bug Analysis,repository,8,2,2,1,0.5,0.25,0.553,SUCCESS
+B01,qwen2.5-coder:7b,Bug Analysis,repository,8,2,2,1,0.5,0.25,0.553,SUCCESS
+B01,deepseek-coder:6.7b,Bug Analysis,repository,8,2,2,1,0.5,0.25,0.553,SUCCESS
+B02,codellama:latest,Bug Analysis,repository,8,2,3,1,0.3333333333333333,0.25,0.299,SUCCESS
+B02,qwen2.5-coder:7b,Bug Analysis,repository,8,2,3,1,0.3333333333333333,0.25,0.299,SUCCESS
+B02,deepseek-coder:6.7b,Bug Analysis,repository,8,2,3,1,0.3333333333333333,0.25,0.299,SUCCESS
+B03,codellama:latest,Bug Analysis,repository,8,0,,0,0,0.0,0.289,SUCCESS
+B03,qwen2.5-coder:7b,Bug Analysis,repository,8,0,,0,0,0.0,0.289,SUCCESS
+B03,deepseek-coder:6.7b,Bug Analysis,repository,8,0,,0,0,0.0,0.289,SUCCESS
+B04,codellama:latest,Bug Analysis,repository,8,2,4,1,0.25,0.25,0.296,SUCCESS
+B04,qwen2.5-coder:7b,Bug Analysis,repository,8,2,4,1,0.25,0.25,0.296,SUCCESS
+B04,deepseek-coder:6.7b,Bug Analysis,repository,8,2,4,1,0.25,0.25,0.296,SUCCESS
+CG01,codellama:latest,Code Generation,repository,8,1,1,1,1.0,0.125,0.291,SUCCESS
+CG01,qwen2.5-coder:7b,Code Generation,repository,8,1,1,1,1.0,0.125,0.291,SUCCESS
+CG01,deepseek-coder:6.7b,Code Generation,repository,8,1,1,1,1.0,0.125,0.291,SUCCESS
+CG02,codellama:latest,Code Generation,repository,8,1,1,1,1.0,0.125,0.56,SUCCESS
+CG02,qwen2.5-coder:7b,Code Generation,repository,8,1,1,1,1.0,0.125,0.56,SUCCESS
+CG02,deepseek-coder:6.7b,Code Generation,repository,8,1,1,1,1.0,0.125,0.56,SUCCESS
+CG03,codellama:latest,Code Generation,repository,8,1,7,1,0.14285714285714285,0.125,0.591,SUCCESS
+CG03,qwen2.5-coder:7b,Code Generation,repository,8,1,7,1,0.14285714285714285,0.125,0.591,SUCCESS
+CG03,deepseek-coder:6.7b,Code Generation,repository,8,1,7,1,0.14285714285714285,0.125,0.591,SUCCESS
+CG04,codellama:latest,Code Generation,repository,8,2,1,1,1.0,0.25,0.294,SUCCESS
+CG04,qwen2.5-coder:7b,Code Generation,repository,8,2,1,1,1.0,0.25,0.294,SUCCESS
+CG04,deepseek-coder:6.7b,Code Generation,repository,8,2,1,1,1.0,0.25,0.294,SUCCESS
+RF01,codellama:latest,Refactoring,repository,8,1,2,1,0.5,0.125,0.555,SUCCESS
+RF01,qwen2.5-coder:7b,Refactoring,repository,8,1,2,1,0.5,0.125,0.555,SUCCESS
+RF01,deepseek-coder:6.7b,Refactoring,repository,8,1,2,1,0.5,0.125,0.555,SUCCESS
+RF02,codellama:latest,Refactoring,repository,8,2,2,1,0.5,0.25,0.291,SUCCESS
+RF02,qwen2.5-coder:7b,Refactoring,repository,8,2,2,1,0.5,0.25,0.291,SUCCESS
+RF02,deepseek-coder:6.7b,Refactoring,repository,8,2,2,1,0.5,0.25,0.291,SUCCESS
+RF03,codellama:latest,Refactoring,repository,8,1,1,1,1.0,0.125,0.592,SUCCESS
+RF03,qwen2.5-coder:7b,Refactoring,repository,8,1,1,1,1.0,0.125,0.592,SUCCESS
+RF03,deepseek-coder:6.7b,Refactoring,repository,8,1,1,1,1.0,0.125,0.592,SUCCESS
+RF04,codellama:latest,Refactoring,repository,8,1,1,1,1.0,0.125,0.294,SUCCESS
+RF04,qwen2.5-coder:7b,Refactoring,repository,8,1,1,1,1.0,0.125,0.294,SUCCESS
+RF04,deepseek-coder:6.7b,Refactoring,repository,8,1,1,1,1.0,0.125,0.294,SUCCESS
+RG01,codellama:latest,RAG,disaster_knowledge_base,4,0,,0,0,0.0,0.324,SUCCESS
+RG01,qwen2.5-coder:7b,RAG,disaster_knowledge_base,4,0,,0,0,0.0,0.324,SUCCESS
+RG01,deepseek-coder:6.7b,RAG,disaster_knowledge_base,4,0,,0,0,0.0,0.324,SUCCESS
+RG02,codellama:latest,RAG,disaster_knowledge_base,4,0,,0,0,0.0,0.308,SUCCESS
+RG02,qwen2.5-coder:7b,RAG,disaster_knowledge_base,4,0,,0,0,0.0,0.308,SUCCESS
+RG02,deepseek-coder:6.7b,RAG,disaster_knowledge_base,4,0,,0,0,0.0,0.308,SUCCESS
+RG03,codellama:latest,RAG,disaster_knowledge_base,4,0,,0,0,0.0,0.313,SUCCESS
+RG03,qwen2.5-coder:7b,RAG,disaster_knowledge_base,4,0,,0,0,0.0,0.313,SUCCESS
+RG03,deepseek-coder:6.7b,RAG,disaster_knowledge_base,4,0,,0,0,0.0,0.313,SUCCESS
+RG04,codellama:latest,RAG,disaster_knowledge_base,5,0,,0,0,0.0,0.576,SUCCESS
+RG04,qwen2.5-coder:7b,RAG,disaster_knowledge_base,0,0,,0,0,0,,ERROR
+RG04,deepseek-coder:6.7b,RAG,disaster_knowledge_base,5,0,,0,0,0.0,0.576,SUCCESS

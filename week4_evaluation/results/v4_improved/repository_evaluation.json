@@ -1,0 +1,1444 @@
+{
+  "project_root": "/Users/anshitiwari/DisasterRelief-AI",
+  "questions_evaluated": [
+    "E01",
+    "CR01",
+    "CR02",
+    "CR03",
+    "CR04",
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "B04",
+    "RF04",
+    "CG04"
+  ],
+  "per_question": [
+    {
+      "question": "Trace what happens when the frontend sends a chat message, starting from frontend/src/App.jsx through POST /api/chat, process_question(), retrieval, context construction, LLM generation, and the returned response.",
+      "question_id": "E01",
+      "model": "codellama:latest",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/benchmarkpanel.jsx"
+      ],
+      "identified_files_in_answer": [
+        "frontend/src/App.jsx"
+      ],
+      "model_answer": "The process of generating a response to a chat message in the frontend starts in the `App.jsx` file. When the user clicks the \"Send\" button, the `sendMessage()` function is called, which sends a POST request to the `/api/chat` endpoint with the chat message as the payload.\n\nHere's a high-level overview of what happens next:\n\n1. The `/api/chat` endpoint is called with the chat message as the payload.\n2. The `process_question()` function is called to process the chat message.\n3. The `retrieve_documents()` function is called to retrieve the relevant documents from the database.\n4. The `build_context()` function is called to construct the context for the chat message.\n5. The `generate_response()` function is called to generate a response to the chat message.\n6. The `retrieve_context()` function is called to retrieve the context for the chat message.\n7. The `generate_response()` function is called again to generate a response to the chat message.\n8. The response is returned to the frontend.\n\nHere's a more detailed explanation of each step:\n\n1. The `/api/chat` endpoint is called with the chat message as the payload.\n\nThe `process_question()` function is called to process the chat message. This function takes the chat message as input and performs the following steps:\n\n* Retrieves the relevant documents from the database using the `retrieve_documents()` function.\n* Constructs the context for the chat message using the `build_context()` function.\n* Generates a response to the chat message using the `generate_response()` function.\n\nThe `retrieve_documents()` function retrieves the relevant documents from the database based on the chat message. The function takes the chat message as input and performs the following steps:\n\n* Tokenizes the chat message using the `tokenize()` function.\n* Searches the database for documents that contain the tokenized chat message using the `search()` function.\n* Returns the retrieved documents.\n\nThe `build_context()` function constructs the context for the chat message based on the retrieved documents. The function takes the retrieved documents as input and performs the following steps:\n\n* Tokenizes the documents using the `tokenize()` function.\n* Extracts the relevant information from the tokenized documents using the `extract_relevant_information()` function.\n* Returns the constructed context.\n\nThe `generate_response()` function generates a response to the chat message based on the constructed context. The function takes the constructed context as input and performs the following steps:\n\n* Tokenizes the chat message using the `tokenize()` function.\n* Searches the database for documents that contain the tokenized chat message using the `search()` function.\n* Retrieves the relevant documents from the database using the `retrieve_documents()` function.\n* Construct",
+      "file_identification_score": 0.1667,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 5/5 relationship checks",
+      "quality_correctness": 0.5,
+      "overall_score": 0.5556,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Trace what happens when the frontend sends a chat message, starting from frontend/src/App.jsx through POST /api/chat, process_question(), retrieval, context construction, LLM generation, and the returned response.",
+      "question_id": "E01",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/benchmarkpanel.jsx"
+      ],
+      "identified_files_in_answer": [
+        "frontend/src/App.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "model_answer": "### Trace of Chat Message Handling\n\n1. **Frontend Interaction**:\n   - The user sends a chat message through the frontend interface.\n   - The message is captured in the `App` component's state.\n\n2. **API Call**:\n   - The frontend sends a POST request to `/api/chat` with the user's message.\n   - This request is handled by the backend service.\n\n3. **Orchestration Service**:\n   - The `process_question` function in `backend/services/orchestration_service.py` is invoked.\n   - This function processes the incoming question, retrieves relevant context, and generates a response.\n\n4. **Context Retrieval**:\n   - The `retrieve_context` function is called to fetch relevant documents based on the user's query.\n   - The retrieved documents are then used to construct the context.\n\n5. **LLM Generation**:\n   - The `generate_response` function in `backend/services/llm_service.py` is invoked.\n   - This function uses the retrieved context to generate a response to the user's question.\n   - The response is generated using a language model (e.g., OLLAMA).\n\n6. **Response Construction**:\n   - The generated response is formatted and returned to the frontend.\n   - The response includes the answer, model details, and latency metrics.\n\n7. **Frontend Display**:\n   - The frontend receives the response and displays it to the user.\n   - The `MarkdownResponse` component renders the response in a formatted manner.\n\n### Key Points\n- **Frontend**: Captures user input and sends it to the backend via an API call.\n- **Backend**: Processes the question, retrieves context, and generates a response.\n- **Orchestration Service**: Orchestrates the flow from question processing to response generation.\n- **Context Retrieval**: Fetches relevant documents based on the user's query.\n- **LLM Generation**: Uses a language model to generate a response.\n- **Response Formatting**: Formats the generated response for display.\n\n### Evidence\n- **Frontend**: `frontend/src/App.jsx` (App, MarkdownResponse)\n- **Backend**: `backend/services/orchestration_service.py` (process_question, retrieve_context)\n- **LLM Service**: `backend/services/llm_service.py` (generate_response)",
+      "file_identification_score": 0.5,
+      "dependency_reasoning_score": 0.8,
+      "dependency_note": "matched 4/5 relationship checks",
+      "quality_correctness": 0.5,
+      "overall_score": 0.6,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Trace what happens when the frontend sends a chat message, starting from frontend/src/App.jsx through POST /api/chat, process_question(), retrieval, context construction, LLM generation, and the returned response.",
+      "question_id": "E01",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/week4benchmark.js",
+        "frontend/src/benchmarkpanel.jsx"
+      ],
+      "identified_files_in_answer": [
+        "frontend/src/App.jsx"
+      ],
+      "model_answer": "The process of tracing what happens when a chat message is sent from the frontend to the backend, starting from `frontend/src/App.jsx` through `POST /api/chat`, `process_question()`, retrieval, context construction, and LLM generation, and the returned response, can be broken down as follows:\n\n1. **User Interaction**: The user interacts with the frontend application, sending a chat message. This is typically done through a form or a similar interface element.\n\n2. **Event Handling**: The frontend application captures this event and sends a POST request to the backend. This is typically done using JavaScript's Fetch API or Axios. The request includes the chat message as part of the payload.\n\n3. **Server-Side Handling**: The backend receives this request. It is typically set up to handle POST requests at the `/api/chat` endpoint.\n\n4. **Question Processing**: The backend processes the chat message. This involves cleaning the message, tokenizing it, and possibly other preprocessing steps. This is typically done using a machine learning library like TensorFlow or PyTorch.\n\n5. **Retrieval**: The processed question is then passed to a retrieval function. This function retrieves relevant documents or information from a database or other source. The number of retrieved documents is controlled by the `top_k` parameter.\n\n6. **Context Construction**: The retrieved documents are then used to construct a context for the question. This context is typically a summary of the retrieved documents.\n\n7. **LLM Generation**: The processed question and constructed context are then passed to a language model for generation of a response. This is typically done using a library like OpenAI's GPT-3 or another LLM.\n\n8. **Response Return**: The backend returns the generated response to the frontend. This is typically sent as a response to the original POST request.\n\n9. **Response Display**: The frontend receives the response and displays it to the user. This is typically done using a component or similar interface element.\n\nEach of these steps can be traced in more detail by adding logging or debugging statements to the relevant parts of the code. For example, you could log the processed question, the retrieved documents, the constructed context, and the generated response at each stage.\n\nPlease note that the exact details may vary depending on the specifics of your application and the libraries or frameworks you are using.",
+      "file_identification_score": 0.1667,
+      "dependency_reasoning_score": 0.6,
+      "dependency_note": "matched 3/5 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.2556,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the /api/chat endpoint that receives a user's question?",
+      "question_id": "CR01",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/main.py"
+      ],
+      "retrieved_files": [
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/rag/rag_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The file that contains the `/api/chat` endpoint that receives a user's question is `backend/services/chat_service.py`. This file contains the `chat` function, which is the endpoint that receives the user's question and returns the answer.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.0,
+      "dependency_note": "matched 0/1 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the /api/chat endpoint that receives a user's question?",
+      "question_id": "CR01",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/main.py"
+      ],
+      "retrieved_files": [
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/rag/rag_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The /api/chat endpoint that receives a user's question is defined in the file `backend/app.py`.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.0,
+      "dependency_note": "matched 0/1 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the /api/chat endpoint that receives a user's question?",
+      "question_id": "CR01",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/main.py"
+      ],
+      "retrieved_files": [
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/rag/rag_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The file that contains the `/api/chat` endpoint that receives a user's question is `backend/services/chat_service.py`.\n\nHere's the relevant part of the code:\n\n```python\nfrom flask import Blueprint, request\nfrom backend.services.chat_service import answer_question\n\nchat_bp = Blueprint('chat', __name__)\n\n@chat_bp.route('/api/chat', methods=['POST'])\ndef chat():\n    data = request.get_json()\n    question = data.get('question')\n    if not question:\n        return {\"error\": \"No question provided\"}, 400\n    result = answer_question(question)\n    return result\n```\n\nThis code defines a Flask route `/api/chat` that accepts POST requests. The question is expected to be in the request body in JSON format with the key `question`. The `answer_question` function from `backend.services.chat_service` is called with the question as an argument.\n\nPlease note that the `answer_question` function in `backend.services.chat_service` is expected to return a dictionary with keys `question`, `answer`, and `sources`.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.0,
+      "dependency_note": "matched 0/1 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the implementation responsible for retrieving relevant chunks from ChromaDB?",
+      "question_id": "CR02",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/main.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py"
+      ],
+      "model_answer": "The implementation responsible for retrieving relevant chunks from ChromaDB is contained in the file \"backend/services/retrieval_service.py\".",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 1/1 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 1.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the implementation responsible for retrieving relevant chunks from ChromaDB?",
+      "question_id": "CR02",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/main.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py"
+      ],
+      "model_answer": "File: backend/services/retrieval_service.py\n\nFunction: rank_and_select_chunks",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 1/1 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 1.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the implementation responsible for retrieving relevant chunks from ChromaDB?",
+      "question_id": "CR02",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/main.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py"
+      ],
+      "model_answer": "The implementation responsible for retrieving relevant chunks from ChromaDB is in the file backend/services/retrieval_service.py. The function rank_and_select_chunks is responsible for this.",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 1/1 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 1.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the implementation that sends the prompt to Ollama and generates the LLM response?",
+      "question_id": "CR03",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/services/retrieval_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The file that contains the implementation for sending the prompt to Ollama and generating the LLM response is `backend/main.py`. This file contains the `chat` function, which is the entry point for the chatbot. The `chat` function takes a `ChatRequest` object as input, which contains the user's message and the model to use for generating the response. The function then resolves the model, processes the question, and returns the response.\n\nHere's a simplified version of the `chat` function:\n```python\ndef chat(request: ChatRequest):\n    try:\n        model = resolve_model(request.model)\n    except ValueError as exc:\n        raise HTTPException(status_code=400, detail=str(exc)) from exc\n\n    result = process_question(\n        request.message,\n        top_k=8,\n        model=model,\n    )\n\n    metrics = result.get(\"metrics\") or {}\n\n    return {\n        \"response\": result[\"answer\"],\n        \"sources\": result[\"sources\"],\n        \"model\": result.get(\"model\") or model or LLM_MODEL,\n        \"retrieved_context\": result.get(\"retrieved_context\") or \"\",\n        \"retrieved_chunk_count\": result.get(\"retrieved_chunk_count\", len(result[\"sources\"])),\n        \"retrieval_latency\": result.get(\"retrieval_latency\"),\n        \"response_latency\": metrics.get(\"response_latency\"),\n        \"prompt_tokens\": metrics.get(\"prompt_tokens\"),\n        \"generated_tokens\": metrics.get(\"generated_tokens\"),\n        \"total_tokens\": metrics.get(\"total_tokens\"),\n        \"throughput\": metrics.get(\"throughput\"),\n        \"allowed_models\": sorted(ALLOWED_MODELS),\n    }\n```\nIn this function, the `resolve_model` function is used to resolve the model to use for generating the response. If the model is not specified in the `ChatRequest`, the default model is used. The `process_question` function is then called to process the question and generate the response. The `metrics` dictionary is used to store the metrics for the response, such as the number of tokens generated and the throughput. Finally, the `chat` function returns the response and the metrics.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.0,
+      "dependency_note": "matched 0/1 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the implementation that sends the prompt to Ollama and generates the LLM response?",
+      "question_id": "CR03",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/services/retrieval_service.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/llm_service.py"
+      ],
+      "model_answer": "File: backend/services/llm_service.py\n\nFunction: generate_response",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 1/1 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 1.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the implementation that sends the prompt to Ollama and generates the LLM response?",
+      "question_id": "CR03",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/main.py",
+        "frontend/src/benchmarkpanel.jsx",
+        "frontend/src/week4benchmark.js",
+        "backend/services/retrieval_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The implementation that sends the prompt to Ollama and generates the LLM response is in the `backend/main.py` file. Specifically, the `chat` function in that file.\n\n```python\ndef chat(request: ChatRequest):\n\n    try:\n        model = resolve_model(request.model)\n    except ValueError as exc:\n        raise HTTPException(status_code=400, detail=str(exc)) from exc\n\n    result = process_question(\n        request.message,\n        top_k=8,\n        model=model,\n    )\n\n    metrics = result.get(\"metrics\") or {}\n\n    return {\n        \"response\": result[\"answer\"],\n        \"sources\": result[\"sources\"],\n        \"model\": result.get(\"model\") or model or LLM_MODEL,\n        \"retrieved_context\": result.get(\"retrieved_context\") or \"\",\n        \"retrieved_chunk_count\": result.get(\"retrieved_chunk_count\", len(result[\"sources\"])),\n        \"retrieval_latency\": result.get(\"retrieval_latency\"),\n        \"response_latency\": metrics.get(\"response_latency\"),\n        \"prompt_tokens\": metrics.get(\"prompt_tokens\"),\n        \"generated_tokens\": metrics.get(\"generated_tokens\"),\n        \"total_tokens\": metrics.get(\"total_tokens\"),\n        \"throughput\": metrics.get(\"throughput\"),\n        \"allowed_models\": sorted(ALLOWED_MODELS),\n    }\n```\n\nThis function takes a `ChatRequest` object as input, which includes the user's message and the model to use. It then processes the question using the `process_question` function, which sends the prompt to Ollama and generates the LLM response. The function then returns a dictionary containing the response, sources, model, retrieval latency, response latency, and other metrics.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.0,
+      "dependency_note": "matched 0/1 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the implementation responsible for generating the embedding of the user's query?",
+      "question_id": "CR04",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/ingestion/ingest.py",
+        "backend/main.py",
+        "frontend/src/week4benchmark.js"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The file that contains the implementation responsible for generating the embedding of the user's query is `backend/ingestion/ingest.py`.\n\nThe `main` function in this file is responsible for processing the user's query and generating the embedding. It first creates a list of all the chunks in the document, and then dumps the list of chunks to a JSON file.\n\nThe `process_document` function is responsible for processing the document and generating the embedding. It takes the document as input and returns a list of chunks. Each chunk is a dictionary that contains the chunk's text, the chunk's embedding, and the chunk's relevance score.\n\nThe `generate_embedding` function is responsible for generating the embedding of the user's query. It takes the query as input and returns the embedding.\n\nThe `generate_relevance_scores` function is responsible for generating the relevance scores for each chunk in the document. It takes the document and the embedding as input and returns a list of relevance scores.\n\nThe `generate_chunk_embeddings` function is responsible for generating the embedding of each chunk in the document. It takes the document and the embedding as input and returns a list of chunk embeddings.\n\nThe `generate_chunk_relevance_scores` function is responsible for generating the relevance scores for each chunk in the document. It takes the document and the embedding as input and returns a list of relevance scores.\n\nThe `generate_chunk_latency` function is responsible for generating the latency of each chunk in the document. It takes the document and the embedding as input and returns a list of latency values.\n\nThe `generate_chunk_throughput` function is responsible for generating the throughput of each chunk in the document. It takes the document and the embedding as input and returns a list of throughput values.\n\nThe `generate_chunk_memory` function is responsible for generating the memory usage of each chunk in the document. It takes the document and the embedding as input and returns a list of memory usage values.\n\nThe `generate_chunk_cpu` function is responsible for generating the CPU usage of each chunk in the document. It takes the document and the embedding as input and returns a list of CPU usage values.\n\nThe `generate_chunk_hallucination` function is responsible for generating the hallucination score of each chunk in the document. It takes the document and the embedding as input and returns a list of hallucination scores.\n\nThe `generate_chunk_code_test_pass_rate` function is responsible for generating the code test pass rate of each chunk in the document. It takes the document and the embedding as input and returns a list of code test pass rate values.\n\nThe `generate_chunk_task_logic_correctness` function is responsible for generating the task logic correctness of each chunk in the document. It takes the document and the embedding as input and returns a list of",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.0,
+      "dependency_note": "matched 0/1 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the implementation responsible for generating the embedding of the user's query?",
+      "question_id": "CR04",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/ingestion/ingest.py",
+        "backend/main.py",
+        "frontend/src/week4benchmark.js"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/embedding_service.py"
+      ],
+      "model_answer": "File: backend/services/embedding_service.py\n\n```python\ndef generate_embedding(text: str):\n    response = requests.post(\n        OLLAMA_EMBEDDING_URL,\n        json={\n            \"model\": EMBEDDING_MODEL,\n            \"prompt\": text\n        },\n        timeout=120\n    )\n\n    response.raise_for_status()\n\n    return response.json()[\"embedding\"]\n```",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 1/1 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 1.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which file contains the implementation responsible for generating the embedding of the user's query?",
+      "question_id": "CR04",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/ingestion/ingest.py",
+        "backend/main.py",
+        "frontend/src/week4benchmark.js"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The implementation responsible for generating the embedding of the user's query can be found in the `backend/main.py` file. Specifically, the `ChatRequest` class in this file is responsible for handling the user's query and generating the embedding.\n\n[SOURCE 7]\n```python\nfrom backend.main import ChatRequest\n\nclass ChatRequest(BaseModel):\n    message: str\n    model: str | None = None\n```\n\nIn this class, the `message` attribute represents the user's query, and the `model` attribute represents the model used to generate the embedding. The `message` is passed to the model's embedding generation function to generate the embedding.\n\nPlease note that the actual implementation of the embedding generation is not provided in this code snippet. It's assumed that the model's embedding generation function is used to generate the embedding based on the `message` and `model` attributes.\n\nAlso, the model's embedding generation function is not provided in this code snippet. It's assumed that it's a separate function or method that takes the `message` and `model` as inputs and returns the embedding.\n\nIf you have more specific questions about the implementation, feel free to ask.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.0,
+      "dependency_note": "matched 0/1 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which files participate in frontend -> /api/chat -> process_question -> retrieval -> context construction -> LLM generation, and how do they depend on each other?",
+      "question_id": "D01",
+      "model": "codellama:latest",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/main.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/services/embedding_service.py",
+        "backend/rag/rag_service.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "model_answer": "The files that participate in the process of generating context for the LLM are:\n\n1. `frontend/src/week4Benchmark.js`: This file contains the code for the Week 4 controlled benchmark, which is used to evaluate the performance of the LLM.\n2. `backend/services/retrieval_service.py`: This file contains the code for the retrieval service, which is responsible for retrieving documents from the database and generating context for the LLM.\n3. `backend/services/embedding_service.py`: This file contains the code for the embedding service, which is responsible for generating embeddings for the documents retrieved by the retrieval service.\n4. `backend/rag/rag_service.py`: This file contains the code for the RAG service, which is responsible for generating the context for the LLM.\n\nThe files depend on each other as follows:\n\n1. `frontend/src/week4Benchmark.js` depends on `backend/services/retrieval_service.py` to retrieve documents from the database and generate context for the LLM.\n2. `backend/services/retrieval_service.py` depends on `backend/services/embedding_service.py` to generate embeddings for the documents retrieved from the database.\n3. `backend/services/embedding_service.py` depends on `backend/rag/rag_service.py` to generate the context for the LLM.\n\nThe process of generating context for the LLM involves the following steps:\n\n1. The frontend sends a request to the retrieval service to retrieve documents from the database.\n2. The retrieval service retrieves the documents from the database and generates embeddings for them using the embedding service.\n3. The embedding service generates the embeddings for the documents and sends them back to the retrieval service.\n4. The retrieval service generates the context for the LLM using the RAG service.\n5. The RAG service generates the context for the LLM by combining the retrieved documents and their corresponding embeddings.\n6. The context is then sent back to the frontend for further processing.\n\nOverall, the process of generating context for the LLM involves several components working together to retrieve documents from the database, generate embeddings for them, and generate the context for the LLM.",
+      "file_identification_score": 0.3333,
+      "dependency_reasoning_score": 0.0,
+      "dependency_note": "matched 0/6 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.1111,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which files participate in frontend -> /api/chat -> process_question -> retrieval -> context construction -> LLM generation, and how do they depend on each other?",
+      "question_id": "D01",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/main.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/services/embedding_service.py",
+        "backend/rag/rag_service.py"
+      ],
+      "identified_files_in_answer": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "model_answer": "The frontend makes a request to `/api/chat`, which triggers the `chat` function in `backend/main.py`. This function then calls `process_question` from `backend/services/orchestration_service.py`. The `process_question` function calls `retrieve_documents` from `backend/services/retrieval_service.py` to fetch documents. These documents are then passed to `build_context` from `backend/rag/rag_service.py` to construct the context. Finally, the context is passed to `generate_response` from `backend/services/llm_service.py` to generate the response.\n\n**Dependency Chain:**\n1. **Frontend (`frontend/src/App.jsx`)** -> `/api/chat` -> `backend/main.py` -> `chat`\n2. **Backend (`backend/main.py`)** -> `process_question` from `backend/services/orchestration_service.py`\n3. **Backend (`backend/services/orchestration_service.py`)** -> `retrieve_documents` from `backend/services/retrieval_service.py`\n4. **Backend (`backend/services/retrieval_service.py`)** -> `build_context` from `backend/rag/rag_service.py`\n5. **Backend (`backend/rag/rag_service.py`)** -> `generate_response` from `backend/services/llm_service.py`\n\n**Files Involved:**\n- `frontend/src/App.jsx`: Triggers the `/api/chat` endpoint.\n- `backend/main.py`: Contains the `chat` function.\n- `backend/services/orchestration_service.py`: Contains the `process_question` function.\n- `backend/services/retrieval_service.py`: Contains the `retrieve_documents` function.\n- `backend/rag/rag_service.py`: Contains the `build_context` function.\n- `backend/services/llm_service.py`: Contains the `generate_response` function.",
+      "file_identification_score": 0.8333,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 6/6 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 0.9444,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Which files participate in frontend -> /api/chat -> process_question -> retrieval -> context construction -> LLM generation, and how do they depend on each other?",
+      "question_id": "D01",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "frontend/src/App.jsx",
+        "backend/main.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/main.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/week4benchmark.js",
+        "backend/services/embedding_service.py",
+        "backend/rag/rag_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The process you described involves several components and their interactions. Here's a simplified view of how they interact:\n\n1. Frontend: The frontend is responsible for user interaction, including sending questions to the backend. It communicates with the backend through the `/api/chat` endpoint.\n\n2. Backend: The backend receives the question from the frontend, processes it, and sends it to the retrieval service. It also receives the metrics from the frontend and sends them back to the frontend.\n\n3. Retrieval Service: This service is responsible for retrieving relevant documents based on the user's question. It uses the Embedding Service to generate embeddings for the query and the documents, and the Chroma database to store and retrieve these embeddings.\n\n4. Embedding Service: This service generates embeddings for the query and the documents. It sends a request to an external embedding service (in this case, OLLAMA) to generate the embeddings.\n\n5. Chroma Database: This is a lightweight, high-performance database for similarity search. It stores the embeddings of the documents and allows for efficient retrieval of documents that are most similar to the query.\n\n6. Context Construction: The retrieved documents are then processed by the RAG (Retrieval-Augmented Generation) service to construct a context for the LLM (Language Model). This involves formatting the retrieved documents into a structured format.\n\n7. RAG Service: This service is responsible for the context construction. It takes the retrieved documents and formats them into a structured format.\n\n8. LLM Generation: The constructed context is then passed to the LLM for generation of a response.\n\nIn summary, the frontend communicates with the backend, which communicates with the retrieval service. The retrieval service communicates with the embedding service and the Chroma database. The context is constructed by the RAG service, which communicates with the retrieval service. The final response is generated by the LLM, which communicates with the backend.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.1667,
+      "dependency_note": "matched 1/6 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.0556,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "How does retrieval_service.py depend on embedding_service.py, and why is this dependency required?",
+      "question_id": "D02",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "model_answer": "The `retrieval_service.py` file depends on the `embedding_service.py` file because it uses the `generate_embedding` function from the `embedding_service.py` file to generate the embedding for the query. The `generate_embedding` function is used to generate the embedding for the query and then pass it to the `_query_results` function in the `retrieval_service.py` file to retrieve the documents that match the query.\n\nThe dependency is required because the `retrieval_service.py` file needs to generate the embedding for the query in order to retrieve the documents that match the query. The `generate_embedding` function is used to generate the embedding for the query and then pass it to the `_query_results` function in the `retrieval_service.py` file to retrieve the documents that match the query.\n\nThe `embedding_service.py` file is used to generate the embedding for the query because it contains the code for generating the embedding for the query. The `generate_embedding` function in the `embedding_service.py` file takes the query as input and generates the embedding for the query. The generated embedding is then passed to the `_query_results` function in the `retrieval_service.py` file to retrieve the documents that match the query.\n\nOverall, the dependency between the `retrieval_service.py` and `embedding_service.py` files is required because the `retrieval_service.py` file needs to generate the embedding for the query in order to retrieve the documents that match the query. The `embedding_service.py` file is used to generate the embedding for the query because it contains the code for generating the embedding for the query.",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 0.5,
+      "dependency_note": "matched 1/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 0.8333,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "How does retrieval_service.py depend on embedding_service.py, and why is this dependency required?",
+      "question_id": "D02",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "model_answer": "`retrieval_service.py` depends on `embedding_service.py` because it uses the `generate_embedding` function to create embeddings for queries. This dependency is required to convert text queries into embeddings that can be used for similarity search in the document collection.",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 0.5,
+      "dependency_note": "matched 1/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 0.8333,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "How does retrieval_service.py depend on embedding_service.py, and why is this dependency required?",
+      "question_id": "D02",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py",
+        "backend/services/embedding_service.py"
+      ],
+      "model_answer": "The dependency between `retrieval_service.py` and `embedding_service.py` can be traced as follows:\n\n1. `retrieval_service.py` uses the `generate_embedding` function from `embedding_service.py`. This is done in the `retrieve_documents` function, specifically in the line `query_embedding = generate_embedding(query)`.\n\n2. The `generate_embedding` function in `embedding_service.py` makes a POST request to an external service (`OLLAMA_EMBEDDING_URL`) to generate an embedding for a given text.\n\n3. The POST request is sent from `retrieval_service.py`, which means `retrieval_service.py` depends on the external service at `OLLAMA_EMBEDDING_URL` to generate embeddings.\n\n4. The dependency is required because the `generate_embedding` function in `embedding_service.py` relies on the external service to generate embeddings, and without this service, the function cannot function.\n\nIn summary, `retrieval_service.py` depends on `embedding_service.py` to generate embeddings, which is why the dependency is required.",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 0.5,
+      "dependency_note": "matched 1/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 0.8333,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "How does the retrieved information move from retrieval_service.py to llm_service.py?",
+      "question_id": "D03",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/embedding_service.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "model_answer": "The retrieved information from the `retrieve_documents` function in `retrieval_service.py` is passed to the `generate_response` function in `llm_service.py` through the `results` parameter.\n\nHere's the relevant code snippet from `retrieval_service.py`:\n```python\ndef retrieve_documents(query, top_k):\n    # ...\n    results = retrieve_documents(query, top_k=top_k)\n    # ...\n    return results\n```\nAnd here's the relevant code snippet from `llm_service.py`:\n```python\ndef generate_response(question, results, top_k):\n    # ...\n    context = build_context(results) if results else \"\"\n    # ...\n    return context\n```\nAs you can see, the `retrieve_documents` function returns the `results` parameter to the `generate_response` function, which then passes it to the `build_context` function to generate the response.",
+      "file_identification_score": 0.6667,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 2/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 0.8889,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "How does the retrieved information move from retrieval_service.py to llm_service.py?",
+      "question_id": "D03",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/embedding_service.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "model_answer": "The retrieved information moves from `retrieval_service.py` to `llm_service.py` through the following call chain:\n\n1. **`retrieve_documents` in `retrieval_service.py`**:\n   - This function retrieves documents based on a query and returns them.\n\n2. **`retrieve_context` in `orchestration_service.py`**:\n   - This function calls `retrieve_documents` from `retrieval_service.py` to get the documents.\n   - It then processes these documents to build a context.\n\n3. **`generate_response` in `llm_service.py`**:\n   - This function is not directly called in the provided context, but it is part of the `llm_service.py` module.\n   - It would typically be called to generate a response based on the context provided by `retrieve_context`.\n\n4. **`clean_response` in `llm_service.py`**:\n   - This function is also part of the `llm_service.py` module.\n   - It would be called to clean and format the response generated by `generate_response`.\n\nIn summary, the retrieved documents from `retrieval_service.py` are passed to `retrieve_context` in `orchestration_service.py`, which then processes these documents to build a context. This context is used to generate a response, which is further cleaned and formatted by `clean_response` in `llm_service.py`.",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 0.5,
+      "dependency_note": "matched 1/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 0.8333,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "How does the retrieved information move from retrieval_service.py to llm_service.py?",
+      "question_id": "D03",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/rag/retrieval.py",
+        "backend/services/embedding_service.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "model_answer": "The flow of information from `retrieval_service.py` to `llm_service.py` can be described as follows:\n\n1. `retrieval_service.py`: This file contains the `retrieve_documents` function, which retrieves documents based on the user's question. This function uses the `retrieve` function from `retrieval.py` to perform the retrieval.\n\n2. `retrieval.py`: This file contains the `retrieve` function, which uses the Chroma, a vector database, to retrieve documents based on the user's question. It generates embeddings for the query and retrieves documents from the Chroma collection that are most similar to the query.\n\n3. `llm_service.py`: This file contains the `generate_response` function, which uses the retrieved documents to generate a response to the user's question. This function uses the embeddings of the retrieved documents to understand the context and generate a response that is relevant to the user's question.\n\n4. The retrieved documents and the generated response are then passed back to the `orchestration_service.py`, which builds the context based on the retrieved documents and returns it along with the generated response.\n\n5. Finally, the context and the generated response are displayed to the user.\n\nPlease note that the actual implementation details may vary based on the specific requirements of your project.",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 0.5,
+      "dependency_note": "matched 1/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 0.8333,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "If the embedding model were replaced with another embedding model, which component would need to change and what part of the pipeline depends on its output?",
+      "question_id": "D04",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The embedding model is a critical component of the pipeline that generates the input embeddings for the language model. If the embedding model were replaced with another model, the following components would need to be updated:\n\n1. The retrieval service: The retrieval service uses the embeddings generated by the embedding model to retrieve the most relevant chunks of text from the corpus. If the embedding model were replaced with another model, the retrieval service would need to be updated to generate the new embeddings.\n2. The generation service: The generation service uses the embeddings generated by the embedding model to generate the response. If the embedding model were replaced with another model, the generation service would need to be updated to generate the new embeddings.\n3. The comparison service: The comparison service uses the embeddings generated by the embedding model to compare the retrieved chunks with the input question. If the embedding model were replaced with another model, the comparison service would need to be updated to generate the new embeddings.\n\nThe pipeline would also need to be updated to use the new embedding model. This would involve training the new embedding model on the new data and updating the pipeline to use the new model's output as the input to the generation and comparison services.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.5,
+      "dependency_note": "matched 1/2 relationship checks",
+      "quality_correctness": 0.5,
+      "overall_score": 0.3333,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "If the embedding model were replaced with another embedding model, which component would need to change and what part of the pipeline depends on its output?",
+      "question_id": "D04",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "If the embedding model were replaced with another embedding model, the component that would need to change is the embedding service or the component responsible for generating embeddings. The pipeline that depends on its output includes the retrieval and comparison services, as they rely on the embeddings to retrieve relevant context and compare the responses from different models.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.5,
+      "dependency_note": "matched 1/2 relationship checks",
+      "quality_correctness": 0.5,
+      "overall_score": 0.3333,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "If the embedding model were replaced with another embedding model, which component would need to change and what part of the pipeline depends on its output?",
+      "question_id": "D04",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/services/embedding_service.py",
+        "backend/services/retrieval_service.py"
+      ],
+      "retrieved_files": [
+        "frontend/src/app.jsx",
+        "backend/services/embedding_service.py",
+        "backend/services/embedding_service.py",
+        "backend/services/llm_service.py",
+        "frontend/src/app.jsx",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/orchestration_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "The component that would need to change is the component responsible for generating embeddings. This could be the component that uses the embedding model for generating embeddings.\n\nThe part of the pipeline that depends on the output of the embedding model includes:\n\n1. **Embedding Generation**: The output of the embedding model is used as input for other models.\n\n2. **Similarity Calculation**: If the similarity between two sentences is calculated using an embedding model, the output of the embedding model is used in this process.\n\n3. **Clustering**: If the sentences are clustered using an embedding model, the output of the embedding model is used in this process.\n\n4. **Dimensionality Reduction**: If the dimensionality of the embeddings is reduced using an embedding model, the output of the embedding model is used in this process.\n\n5. **Nearest Neighbor Search**: If the nearest neighbors of a sentence are found using an embedding model, the output of the embedding model is used in this process.\n\n6. **Topic Modeling**: If topics are modeled using an embedding model, the output of the embedding model is used in this process.\n\n7. **Text Classification**: If text is classified using an embedding model, the output of the embedding model is used in this process.\n\nTo adapt the pipeline to a different embedding model, you would need to replace the current embedding model with the new model and ensure that the new model produces the correct output for the components that depend on it. This could involve adjusting the parameters of the new model, or changing the way it is used in the pipeline.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 0.0,
+      "dependency_note": "matched 0/2 relationship checks",
+      "quality_correctness": 0.0,
+      "overall_score": 0.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "What could happen if the relevant information exists in the knowledge base but the retrieval system fails to retrieve the relevant chunk?",
+      "question_id": "B04",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/rag/retrieval.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "If the retrieval system fails to retrieve the relevant chunk from the knowledge base, the AI system may not be able to generate a relevant response. This could happen if the retrieval system is not able to accurately identify the relevant information in the knowledge base, or if the chunk is not available in the knowledge base.\n\nIn this case, the AI system may generate a response that is not relevant to the user's situation, which could lead to confusion or frustration. To mitigate this risk, the AI system could be designed to provide a fallback response if the retrieval system fails to retrieve the relevant chunk. This fallback response could be a generic message that acknowledges the user's question and encourages them to provide more information or context.\n\nAlternatively, the AI system could be designed to provide a more detailed response that highlights the limitations of the retrieval system and encourages the user to provide more information or context. This could help to reduce the risk of confusion or frustration caused by a failed retrieval.\n\nOverall, it is important to carefully design the retrieval system and the AI system to ensure that they work together effectively to provide relevant and helpful responses to users.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 2/2 relationship checks",
+      "quality_correctness": 0.5,
+      "overall_score": 0.5,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "What could happen if the relevant information exists in the knowledge base but the retrieval system fails to retrieve the relevant chunk?",
+      "question_id": "B04",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/rag/retrieval.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "If the relevant information exists in the knowledge base but the retrieval system fails to retrieve the relevant chunk, the following could happen:\n\n- **Incomplete Response**: The AI may provide an answer that is missing critical details or facts, as it will not have access to the full context needed to form a comprehensive response.\n- **Misinterpretation**: Without the necessary information, the AI might misinterpret the question or provide an answer that is not directly relevant or accurate.\n- **User Confusion**: The user might be left with incomplete or confusing information, leading to dissatisfaction with the assistance provided.\n- **Delayed Response**: The retrieval failure could delay the generation of a response, as the AI must first retrieve the relevant information before it can process and generate a response.\n\nTo mitigate these issues, it is crucial to ensure that the retrieval system is robust and reliable, capable of accurately identifying and retrieving the necessary information from the knowledge base.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 2/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 0.6667,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "What could happen if the relevant information exists in the knowledge base but the retrieval system fails to retrieve the relevant chunk?",
+      "question_id": "B04",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/retrieval_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/retrieval_service.py",
+        "frontend/src/app.jsx",
+        "backend/rag/retrieval.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "frontend/src/app.jsx"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "If the relevant information exists in the knowledge base but the retrieval system fails to retrieve the relevant chunk, it could lead to a situation where the AI model lacks the necessary context to generate a meaningful response. This could result in a less accurate or less helpful response compared to when the relevant chunk is available.\n\nThe retrieval system is crucial for the AI model to understand and generate relevant responses. If it fails to retrieve the relevant chunk, the model may not have the necessary context to generate a meaningful response. This could lead to a situation where the AI model lacks the necessary context to generate a meaningful response.\n\nTo mitigate this issue, it would be beneficial to have a robust system for managing and updating the knowledge base. This could involve regular updates and maintenance of the knowledge base to ensure that the relevant chunks are always available for retrieval.\n\nMoreover, the system should be designed in a way that it can handle situations where the retrieval system fails to retrieve the relevant chunk. This could involve providing a default response or a fallback mechanism to handle such situations.\n\nIn conclusion, the retrieval system's ability to retrieve the relevant chunk is crucial for the AI model's performance. If it fails to retrieve the relevant chunk, it could lead to a situation where the AI model lacks the necessary context to generate a meaningful response. Therefore, it's important to have a robust system for managing and updating the knowledge base and to design the system in a way that it can handle situations where the retrieval system fails to retrieve the relevant chunk.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 2/2 relationship checks",
+      "quality_correctness": 0.5,
+      "overall_score": 0.5,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Write a Python unit test for build_context() that verifies that the generated context contains the document name, authority, disaster type, page information, and document content.",
+      "question_id": "CG04",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "To write a Python unit test for build_context(), you can follow these steps:\n\n1. Import the necessary libraries:\n```python\nimport unittest\nfrom backend.services.llm_service import build_context\n```\n2. Define a test class that inherits from unittest.TestCase:\n```python\nclass TestBuildContext(unittest.TestCase):\n    pass\n```\n3. Define a test method that calls build_context() with a sample question and context, and checks that the generated context contains the expected information:\n```python\ndef test_build_context(self):\n    question = \"What is the capital of France?\"\n    context = \"The capital of France is Paris. It is located in the Île-de-France region.\"\n    generated_context = build_context(question, context)\n    self.assertIn(\"Paris\", generated_context)\n    self.assertIn(\"France\", generated_context)\n    self.assertIn(\"Île-de-France\", generated_context)\n    self.assertIn(\"region\", generated_context)\n    self.assertIn(\"content\", generated_context)\n```\n4. Run the test using the unittest.main() function:\n```python\nif __name__ == '__main__':\n    unittest.main()\n```\nThis will run the test and print the results. If the test passes, you should see a message indicating that all tests passed. If the test fails, you should see a message indicating which test failed and why.\n\nYou can also use the unittest.TestCase.assertEqual() method to check that the generated context is equal to a pre-defined expected context:\n```python\ndef test_build_context(self):\n    question = \"What is the capital of France?\"\n    context = \"The capital of France is Paris. It is located in the Île-de-France region.\"\n    expected_context = \"Paris, France, Île-de-France, region, content\"\n    generated_context = build_context(question, context)\n    self.assertEqual(generated_context, expected_context)\n```\nThis will check that the generated context is equal to the expected context, and fail the test if they are not equal.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 1/1 relationship checks",
+      "quality_correctness": 0.5,
+      "overall_score": 0.5,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Write a Python unit test for build_context() that verifies that the generated context contains the document name, authority, disaster type, page information, and document content.",
+      "question_id": "CG04",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "```python\nfrom backend.services.orchestration_service import build_context\n\ndef test_build_context():\n    results = [\n        {\n            \"metadata\": {\n                \"document\": \"Document1\",\n                \"authority\": \"Authority1\",\n                \"disaster\": \"earthquake\",\n                \"pages\": [1, 2]\n            },\n            \"text\": \"Content of Document1\"\n        },\n        {\n            \"metadata\": {\n                \"document\": \"Document2\",\n                \"authority\": \"Authority2\",\n                \"disaster\": \"flood\",\n                \"pages\": [3, 4]\n            },\n            \"text\": \"Content of Document2\"\n        }\n    ]\n    context = build_context(results)\n    assert \"Document1\" in context\n    assert \"Authority1\" in context\n    assert \"earthquake\" in context\n    assert \"Document2\" in context\n    assert \"Authority2\" in context\n    assert \"flood\" in context\n    assert \"Page(s): [1, 2]\" in context\n    assert \"Page(s): [3, 4]\" in context\n    assert \"Content of Document1\" in context\n    assert \"Content of Document2\" in context\n```",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 1/1 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 0.6667,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Write a Python unit test for build_context() that verifies that the generated context contains the document name, authority, disaster type, page information, and document content.",
+      "question_id": "CG04",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/services/orchestration_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/orchestration_service.py",
+        "backend/rag/rag_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/ingestion/ingest.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/retrieval_service.py",
+        "backend/services/llm_service.py"
+      ],
+      "identified_files_in_answer": [],
+      "model_answer": "Sure, here is a Python unit test for the `build_context()` function. This test assumes that the `build_context()` function takes a document object as input and returns a string. The test checks if the returned string contains the document name, authority, disaster type, page information, and document content.\n\n```python\nimport unittest\nfrom backend.services.llm_service import build_context\n\nclass TestBuildContext(unittest.TestCase):\n    def test_build_context(self):\n        # Assuming a document object with the following structure\n        document = {\n            'name': 'Test Document',\n            'authority': 'Test Authority',\n            'disaster_type': 'Test Disaster',\n            'page_info': 'Test Page Info',\n            'content': 'Test Content'\n        }\n\n        # Call the function with the document object\n        context = build_context(document)\n\n        # Check if the context contains the document name, authority, disaster type, page information, and content\n        self.assertIn(document['name'], context)\n        self.assertIn(document['authority'], context)\n        self.assertIn(document['disaster_type'], context)\n        self.assertIn(document['page_info'], context)\n        self.assertIn(document['content'], context)\n\nif __name__ == '__main__':\n    unittest.main()\n```\n\nPlease replace the document object with the actual document object you are using in your application. The test will check if the context contains the document name, authority, disaster type, page information, and content.\n\nPlease note that the actual implementation of the `build_context()` function and the structure of the document object may vary, so you may need to adjust the test to fit your specific use case.",
+      "file_identification_score": 0.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 1/1 relationship checks",
+      "quality_correctness": 0.5,
+      "overall_score": 0.5,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Refactor the LLM configuration in llm_service.py so that the model name and generation parameters can be changed without modifying the response-generation logic.",
+      "question_id": "RF04",
+      "model": "codellama:latest",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/embedding_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/main.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/llm_service.py"
+      ],
+      "model_answer": "To refactor the LLM configuration in `llm_service.py` so that the model name and generation parameters can be changed without modifying the response-generation logic, you can use a more flexible approach to loading the LLM models.\n\nCurrently, the LLM models are loaded using the `load_model` function, which takes the model name and generation parameters as arguments. However, this approach is inflexible, as it requires the model name and generation parameters to be hardcoded in the function.\n\nTo make the LLM configuration more flexible, you can use a more dynamic approach to loading the LLM models. One way to do this is to use a dictionary to store the LLM models, where the keys are the model names and the values are the corresponding generation parameters.\n\nHere's an example of how you can modify the `load_model` function to use a dictionary to store the LLM models:\n```python\n# Load the LLM models\nllm_models = {}\nfor model_name in ALLOWED_MODELS:\n    generation_params = {\n        \"num_beams\": 4,\n        \"max_length\": 20,\n        \"min_length\": 10,\n        \"no_repeat_ngram_size\": 3,\n    }\n    llm_models[model_name] = load_model(model_name, generation_params)\n\n# Load the LLM model based on the request\ndef load_model(request):\n    model_name = request.model\n    generation_params = llm_models[model_name]\n    return load_model(model_name, generation_params)\n```\nWith this approach, the LLM models are loaded into a dictionary, where the keys are the model names and the values are the corresponding generation parameters. The `load_model` function can then be modified to load the LLM model based on the request, by retrieving the generation parameters from the dictionary using the model name.\n\nThis approach makes the LLM configuration more flexible, as it allows the model name and generation parameters to be changed without modifying the response-generation logic. It also makes it easier to add new LLM models to the system, as the generation parameters can be added to the dictionary without modifying the response-generation logic.",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 2/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 1.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Refactor the LLM configuration in llm_service.py so that the model name and generation parameters can be changed without modifying the response-generation logic.",
+      "question_id": "RF04",
+      "model": "qwen2.5-coder:7b",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/embedding_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/main.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/llm_service.py"
+      ],
+      "model_answer": "To refactor the LLM configuration in `llm_service.py` so that the model name and generation parameters can be changed without modifying the response-generation logic, we need to introduce a configuration class or dictionary that holds the model and generation parameters. This way, any changes to the model or parameters can be made in one place without affecting the core logic.\n\nHere's a refactored version of the `generate_response` function and the introduction of a configuration class:\n\n```python\n# backend/services/llm_service.py\n\nfrom backend.services.llm_service import generate_response\nfrom backend.services.llm_service import response_focus_instruction\nfrom backend.services.orchestration_service import empty_generation_metrics\nfrom backend.services.embedding_service import generate_embedding\nfrom backend.main import ChatRequest\n\nclass LLMConfig:\n    def __init__(self, model: str, temperature: float = 0.0, num_predict: int = 220, num_ctx: int = 4096):\n        self.model = model\n        self.temperature = temperature\n        self.num_predict = num_predict\n        self.num_ctx = num_ctx\n\n    def to_dict(self):\n        return {\n            \"model\": self.model,\n            \"temperature\": self.temperature,\n            \"num_predict\": self.num_predict,\n            \"num_ctx\": self.num_ctx,\n        }\n\nLLM_CONFIG = LLMConfig(model=\"codellama:latest\", temperature=0.0, num_predict=220, num_ctx=4096)\n\ndef generate_response(question: str, context: str, model_config: LLMConfig = LLM_CONFIG):\n    selected_model = resolve_model(model_config.model)\n    print(f\"[MODEL] {selected_model}\", flush=True)\n    print(f\"[CONTEXT] characters={len(context)}\", flush=True)\n\n    focus_excerpt = build_focus_excerpt(question, context)\n    _, _, matched_focus = query_focus_support(question, context)\n    user_prompt = f\"\"\"\n{SYSTEM_INSTRUCTION}\n\nRELEVANCE FILTER:\n{response_focus_instruction(question)}\n\nUse only the evidence below. The backend answerability check found these\ncore question terms in the evidence: {\", \".join(matched_focus)}.\nWrite a concise synthesis of the relevant facts. The focused passages are\ninternal reading aids only: do not quote or enumerate them as evidence.\n\nINTERNAL RELEVANCE HINTS:\n{focus_excerpt}\n\nEVIDENCE:\n\n{context}\n\nEND EVIDENCE\n\nQUESTION:\n{question}\n\nANSWER:\n\"\"\"\n\n    print(\"[GENERATION] started\", flush=True)\n    start = time.perf_counter()\n    response = requests.post(\n        OLLAMA_CHAT_URL,\n        json={\n            \"model\": selected_model,\n            \"messages\": [\n                {\"role\": \"user\", \"content\": user_prompt},\n                {\n                    \"role\": \"assistant\",\n                    \"content\": (\n                        \"A concise answer with no more than six distinct, \"\n                        f\"unique chunks returned for each live request.\"\n                    ),\n                },\n            ],\n            **model_config.to_dict(),\n        },\n        timeout=30,\n    )\n    # ... (rest of the function remains the same)\n```\n\nIn",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 2/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 1.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    },
+    {
+      "question": "Refactor the LLM configuration in llm_service.py so that the model name and generation parameters can be changed without modifying the response-generation logic.",
+      "question_id": "RF04",
+      "model": "deepseek-coder:6.7b",
+      "expected_files": [
+        "backend/services/llm_service.py"
+      ],
+      "retrieved_files": [
+        "backend/services/llm_service.py",
+        "backend/services/llm_service.py",
+        "backend/services/orchestration_service.py",
+        "backend/services/embedding_service.py",
+        "frontend/src/app.jsx",
+        "frontend/src/app.jsx",
+        "backend/services/orchestration_service.py",
+        "backend/main.py"
+      ],
+      "identified_files_in_answer": [
+        "backend/services/llm_service.py"
+      ],
+      "model_answer": "To refactor the LLM configuration in `llm_service.py` so that the model name and generation parameters can be changed without modifying the response-generation logic, you can create a configuration class that holds the model name and generation parameters. This class can then be used to configure the LLM service.\n\nHere's an example of how you can do this:\n\n```python\n# llm_service.py\n\nclass LLMConfig:\n    def __init__(self, model_name: str, generation_params: dict):\n        self.model_name = model_name\n        self.generation_params = generation_params\n\nclass LLMService:\n    def __init__(self, config: LLMConfig):\n        self.config = config\n\n    def generate_response(self, question: str):\n        # Use the model name and generation parameters from the config\n        model_name = self.config.model_name\n        generation_params = self.config.generation_params\n\n        # Continue with the rest of your response generation logic...\n```\n\nThen, when you create an instance of `LLMService`, you can pass in an instance of `LLMConfig` with the desired model name and generation parameters:\n\n```python\nconfig = LLMConfig(\"model_name\", {\"param1\": \"value1\", \"param2\": \"value2\"})\nllm_service = LLMService(config)\n```\n\nNow, if you want to change the model name or generation parameters, you can do so by creating a new `LLMConfig` instance:\n\n```python\nnew_config = LLMConfig(\"new_model_name\", {\"new_param1\": \"new_value1\", \"new_param2\": \"new_value2\"})\nllm_service = LLMService(new_config)\n```\n\nThis way, the response-generation logic in `LLMService` doesn't need to be modified each time you want to change the model name or generation parameters.",
+      "file_identification_score": 1.0,
+      "dependency_reasoning_score": 1.0,
+      "dependency_note": "matched 2/2 relationship checks",
+      "quality_correctness": 1.0,
+      "overall_score": 1.0,
+      "success": true,
+      "pipeline_reference": {
+        "frontend": "frontend/src/App.jsx analyzeSituation()",
+        "api": "backend/main.py chat() POST /api/chat",
+        "orchestration": "backend/services/orchestration_service.py process_question()",
+        "retrieval": "backend/services/retrieval_service.py retrieve_documents()",
+        "context": "backend/services/orchestration_service.py build_context()",
+        "generation": "backend/services/llm_service.py generate_response()",
+        "llm": "Ollama POST /api/generate model=codellama:latest in the live app",
+        "no_results": "process_question returns FALLBACK_RESPONSE without calling generate_response"
+      }
+    }
+  ],
+  "aggregates": {
+    "codellama:latest": {
+      "n": 12,
+      "mean_file_identification_score": 0.3472,
+      "mean_dependency_reasoning_score": 0.5833,
+      "mean_overall_score": 0.4768
+    },
+    "qwen2.5-coder:7b": {
+      "n": 12,
+      "mean_file_identification_score": 0.6111,
+      "mean_dependency_reasoning_score": 0.775,
+      "mean_overall_score": 0.7398
+    },
+    "deepseek-coder:6.7b": {
+      "n": 12,
+      "mean_file_identification_score": 0.3472,
+      "mean_dependency_reasoning_score": 0.4806,
+      "mean_overall_score": 0.4148
+    }
+  },
+  "actual_call_graph": [
+    "frontend/src/App.jsx analyzeSituation() POST http://127.0.0.1:8000/api/chat",
+    "backend/main.py chat(ChatRequest) -> process_question(message, top_k=8)",
+    "orchestration_service.process_question -> retrieve_documents",
+    "retrieval_service.retrieve_documents -> detect_disaster + generate_embedding + Chroma collection disaster_relief",
+    "if no results: return FALLBACK_RESPONSE",
+    "else build_context -> generate_response -> Ollama /api/generate"
+  ]
+}
